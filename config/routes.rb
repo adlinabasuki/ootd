@@ -5,4 +5,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :items
+  resources :outfits, only: [:new, :create]
+
+  get "dress_me", to: "outfits#dress_me"
+  get "affirmations/display", to: "affirmations#display"
 end
