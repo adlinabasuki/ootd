@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :items
   resources :outfits, only: [:new, :create]
+  resources :occasions, only: :create
 
   get "dress_me", to: "outfits#dress_me"
   get "affirmations/display", to: "affirmations#display"
