@@ -1,13 +1,16 @@
 <div class="container" id="dress-me-container">
-  <h1>Welcome <%= @user.first_name %>!</h1>
+
+  <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
+  <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
   <h2>What look are you going for today?</h2>
 
-  <%= form_tag("/outfits/new", method: "get") do %>
-    <%= select("occasion", "name", @occasions_name)  %>
-    <%= submit_tag("Let's Go!", class: "btn btn-primary")  %>
-  <% end %>
+  <div class="occasion-selector">
+    <%= form_tag("/outfits/new", method: "get") do %>
+      <%= select("occasion", "name", @occasions_name)  %>
+      <%= submit_tag("Let's Go!", class: "btn-flat")  %>
+    <% end %>
+  </div>
 
   <h2>Add a new item</h2>
-  <button type="button" class="btn btn-flat">ADD</button>
-
+  <button type="button" class="btn-flat mt-2">ADD</button>
 </div>
