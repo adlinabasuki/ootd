@@ -1,10 +1,4 @@
-.cancle-btn-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .form-container {
+.form-container {
     display: flex;
     border-radius: 5px;
     justify-content: center;
@@ -16,8 +10,7 @@
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    background-color: #DFDFDF;
-    border-radius: 20px;
+    background-color: #FFFFFF;
     margin: 0 auto;
   }
   
@@ -32,4 +25,13 @@
     display: block;
     margin: 0 auto;
   }
-  
+
+  .form-dropdown {
+    height: 1.7em;
+    width: 17em;
+    font-weight: 500;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #DFDFDF;
+    border: 0px;
+  }
