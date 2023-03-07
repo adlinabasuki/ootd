@@ -4,14 +4,17 @@
   <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
   <h2>What look are you going for today?</h2>
 
-  <div class="occasion-selector">
+  <div class="occasion-selector mt-5">
     <%= form_tag("/outfits/new", method: "get") do %>
       <%= select("occasion", "name", @occasions_name)  %>
-      <%= submit_tag("Let's Go!", class: "btn-flat")  %>
+      <%= submit_tag("Let's Go!", class: "btn-flat mt-3")  %>
     <% end %>
+  </div>
+  <div id="dress-me-space-between">
   </div>
 
   <h2>Add a new item</h2>
-  <button type="button" class="btn-flat mt-2">ADD</button>
-
+  <%= button_to "ADD", new_item_path,
+      :class => "btn-flat mt-2",
+      :method => :get %>
 </div>
