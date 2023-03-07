@@ -1,0 +1,155 @@
+.card-container {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 35px 0px;
+    flex-wrap: wrap;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  .card {
+    border-radius: 5px;
+    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    flex: 1 1 300px;
+    // overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    border: 2px solid #1e1e1e10;
+    // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .card .card-info {
+    padding: 10px;
+  
+    .card-info-description {
+      height: 2lh;
+      overflow: hidden;
+    }
+  }
+  
+  .card .card-info h2 {
+    margin-top: 0;
+  }
+  
+  .card .card-info p {
+    margin-bottom: 10px;
+  }
+  
+  .card .card-info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  // Card Products
+  
+  .card-product {
+    overflow: hidden;
+    height: 120px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    border-radius: 20px;
+  }
+  
+  .card-product img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
+  
+  .card-product h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-product p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  
+  .card-product .card-product-infos {
+    padding: 16px;
+  }
+  
+  .card-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .card-button-div {
+    display: flex;
+    align-items: end;
+  }
+  
+  
+  // Smallest device
+  @media (min-width: 100px) and (max-width: 575px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  // XXL devices (extra large desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
