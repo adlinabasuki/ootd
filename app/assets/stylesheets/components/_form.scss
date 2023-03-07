@@ -1,0 +1,35 @@
+.cancle-btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .simple_form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #DFDFDF;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  
+  .form-inputs {
+  }
+  
+  .form-actions {
+    text-align: center;
+  }
+  
+  .form-actions button {
+    display: block;
+    margin: 0 auto;
+  }
+  
