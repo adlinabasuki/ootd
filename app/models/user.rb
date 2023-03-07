@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :items
   has_many :outfits
-  has_many :occasions
+  # has_many :occasions
 end
