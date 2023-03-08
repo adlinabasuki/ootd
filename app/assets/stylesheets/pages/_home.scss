@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+
+body {
+  position: relative;
+}
+
+.home-page-container {
+  // overflow: hidden;
+  background-color: #ffffffa8;
+  background-blend-mode: overlay;
+  background-image: url("landing-page-2.png");
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page-content {
+  text-align: center;
+}
+
+.no-margin-text {
+  margin-bottom: 0px;
+}
+
+.margin-topper {
+  margin-top: 20px;
+}

@@ -1,6 +1,6 @@
 <div class="container" id="new-outfit-container">
-  <%= form_tag("/outfits/new", method: "get") do %>
-    <%= select("occasion", "name", @occasions_name)  %>
+  <%= form_with url: "/outfits/new", method: :get do |form| %>
+    <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
   <% end %>
 
   <p>Top</p>
