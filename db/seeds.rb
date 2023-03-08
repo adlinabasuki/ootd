@@ -34,6 +34,7 @@ casual = Occasion.create(name: "CASUAL")
 gym = Occasion.create(name: "GYM")
 puts "created #{Occasion.count} occasion"
 
+
 #Creating item
 puts "creating item"
 
@@ -128,3 +129,4 @@ ItemsOccasion.create(
 )
 
 puts "created #{ItemsOccasion.count} occasion"
+
