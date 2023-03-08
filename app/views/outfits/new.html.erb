@@ -1,6 +1,14 @@
-<div class="container">
-<h1>generated outfit</h1>
-<h2>top</h2>
-<h2>bottom</h2>
-<h2>shoes</h2>
+<div class="container" id="new-outfit-container">
+  <%= form_tag("/outfits/new", method: "get") do %>
+    <%= select("occasion", "name", @occasions_name)  %>
+    <%# <%= submit_tag("Let's Go!", class: "btn btn-primary")  %>
+  <% end %>
+
+  <h3>top</h3>
+  <h3>bottom</h3>
+  <h3>shoes</h3>
+
+  <button type="button" class="btn btn-flat">DRESS ME</button>
+  <button type="button" class="btn btn-flat">REDO</button>
+
 </div>
