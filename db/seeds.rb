@@ -32,10 +32,10 @@ Occasion.create(name: "CASUAL")
 Occasion.create(name: "GYM")
 puts "created #{Occasion.count} occasion"
 
-# #Creating occasions
-# puts "creating occasions"
-# Occasion.create(name: "WORK", user: stefany)
-# Occasion.create(name: "NIGHT OUT", user: stefany)
-# Occasion.create(name: "CASUAL", user: stefany)
-# Occasion.create(name: "GYM", user: stefany)
-# puts "created #{Occasion.count} occasion"
+#Creating users
+puts "creating users"
+stefany = User.new(first_name: "Stefany", last_name: "Noguera", email: "stefany@gmail.com", password:"password")
+stefany.save
+puts "created #{User.count} users"
+
+#Items
