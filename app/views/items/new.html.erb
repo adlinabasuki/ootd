@@ -1,10 +1,17 @@
-<h1>add new item</h1>
-<%= simple_form_for(@item, html: { class: "container" }) do |f| %>
-  <%= f.input :name %>
 
-  <%= f.input :type %>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="width: 70%">
+    <h1 class="text-center">Add new item</h1>
+    <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
+      <%= f.input :name %>
 
-  <%= f.input :photo, as: :file %>
+      <%= f.input :type %>
 
-  <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
+      <%= f.input :photo, as: :file %>
+
+      <div style="text-align: center;">
+        <%= f.button :submit, value: 'Add', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
