@@ -1,5 +1,6 @@
 class OutfitsController < ApplicationController
   def new
+    raise
     @user = current_user
     @occasions = Occasion.all
     @occasions_name = []
