@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # destroying all users
-
+ItemsOccasion.destroy_all
 Item.destroy_all
 puts "destroying all users"
 User.destroy_all
@@ -32,10 +32,6 @@ Occasion.create(name: "CASUAL")
 Occasion.create(name: "GYM")
 puts "created #{Occasion.count} occasion"
 
-#Creating users
-puts "creating users"
-stefany = User.new(first_name: "Stefany", last_name: "Noguera", email: "stefany@gmail.com", password:"password")
-stefany.save
-puts "created #{User.count} users"
-
-#Items
+# Create items
+item_one = Item.create(id: 1, name: 'Shirt', type: 'TOP', user_id: 2)
+item_one.save
