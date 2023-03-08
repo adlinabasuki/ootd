@@ -15,14 +15,29 @@
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                placeholder: "New password",
+                input_html: { 
+                  autocomplete: "new-password",
+                  class: "text-center"
+                   } %>
     <%= f.input :password_confirmation,
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                label: false,
+                  placeholder: "Confirm new password",
+                input_html: { 
+                  autocomplete: "new-password",
+                  class: "text-center"
+                   } %>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
+                label: false,
+                  placeholder: "Current password",
+                input_html: { 
+                  autocomplete: "current-password",
+                  class: "text-center"
+                   } %>
   </div>
 
   <div class="form-actions">
