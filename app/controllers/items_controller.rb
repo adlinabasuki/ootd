@@ -9,14 +9,21 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @occasions = Occasion.all
+    @occasions_name = []
+    @occasions.each do |occasion|
+      @occasions_name << occasion.name
+    end
   end
 
   def create
-    # Create a new item with the Cloudinary URL
     @item = Item.new(item_params)
-    user = current_user
-    @item.user = user
+    all_occasions = params[:item][:items_occasions].compact_blank
+    @item.user = current_user
     if @item.save
+      all_occasions.each do |occasion|
+        ItemsOccasion.create(occasion_id: Occasion.find(occasion.to_i).id, item_id: @item.id)
+      end
       redirect_to items_path
     else
       render :new
