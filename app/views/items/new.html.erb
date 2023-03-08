@@ -1,11 +1,12 @@
-
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
   <div style="width: 70%">
     <h1 class="text-center">Add new item</h1>
     <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
       <%= f.input :name %>
 
-      <%= f.input :type %>
+      <%= f.input :type, collection: Item::TYPE_OPTIONS %>
+
+      <%= f.input :items_occasions, collection: @occasions, input_html: { multiple: true } %>
 
       <%= f.input :photo, as: :file %>
 
@@ -15,3 +16,4 @@
     <% end %>
   </div>
 </div>
+<%= console %>
