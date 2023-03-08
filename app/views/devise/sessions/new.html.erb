@@ -1,6 +1,6 @@
 <%# <h2>Log in</h2> %>
 <div class="container">
-  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 13em;") %>
+  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 14em; margin-bottom: 3em") %>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
     <div class="form-inputs">
@@ -29,7 +29,7 @@
     </div>
   <% end %>
 
-  <div class="text-center" style="padding-top: 10em;">
+  <div class="text-center" style="padding-top: 12em;">
     <%= render "devise/shared/links" %>
   </div>
 </div>
