@@ -29,3 +29,5 @@ puts "creating users"
 stefany = User.new(first_name: "Stefany", last_name: "Noguera", email: "stefany@gmail.com", password:"password")
 stefany.save
 puts "created #{User.count} users"
+
+#Items
