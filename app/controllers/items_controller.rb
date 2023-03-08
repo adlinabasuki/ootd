@@ -5,6 +5,15 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "items/index_grid", locals: { items: @items }, formats: [:html] }
+    end
+    @occasions = Occasion.all
+    @occasions_name = []
+    @occasions.each do |occasion|
+      @occasions_name << occasion.name
+    end
   end
 
   def new
