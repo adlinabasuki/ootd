@@ -1,13 +1,16 @@
-<div class="index-card col-6">
-  <%= cl_image_tag item.photo.key, alt: item.name, class: "item-index-img" %>
-  <div class="index-card-infos">
-    <p><%= item.name %></p>
-    <% if item.type == "TOP" %>
-      <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon" %>
-    <% elsif item.type == "BOTTOM" %>
-      <%= image_tag "trousers.png", alt: "trousers", class: "type-item-icon" %>
-    <% else %>
-      <%= image_tag "sneakers.png", alt: "sneakers", class: "type-item-icon" %>
+
+  <div class="index-card col-6">
+  <%= link_to item_path(item) do %>
+    <%= cl_image_tag item.photo.key, alt: item.name, class: "item-index-img" %>
+    <div class="index-card-infos">
+      <p><%= item.name %></p>
+      <% if item.type == "TOP" %>
+        <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon" %>
+      <% elsif item.type == "BOTTOM" %>
+        <%= image_tag "trousers.png", alt: "trousers", class: "type-item-icon" %>
+      <% else %>
+        <%= image_tag "sneakers.png", alt: "sneakers", class: "type-item-icon" %>
+      <% end %>
+    </div>
     <% end %>
   </div>
-</div>
