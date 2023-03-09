@@ -5,9 +5,20 @@
     color: black;
 }
 
-.btn-flat {
+.btn-primary {
+  color: #1E1E1E;
+  border: none;
+  // padding: 2em;
+  border-radius: 50px;
+  font-weight: bold;
+  background: #a0ca9b;
+  transition: background 0.3s ease;
+  width: 17em;
+}
+
+.btn-secondary {
     color: #1E1E1E;
-    border: 2.5px solid #1E1E1E;
+    border: none;
     // padding: 2em;
     border-radius: 50px;
     font-weight: bold;
@@ -15,7 +26,7 @@
     transition: background 0.3s ease;
     width: 17em;
   }
-  
+
   .btn-flat:hover {
     background: #1E1E1E;
     color: white;
