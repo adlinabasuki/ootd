@@ -17,6 +17,9 @@ module Ootd
     config.load_defaults 7.0
 
     config.hosts << /(.*\.)?eu.ngrok.io/
+    config.hosts << /(.*\.)?ootd.herokuapp.com/
+    config.hosts << /(.*\.)?outfitoftheday.online/
+
 
     # Configuration for the application, engines, and railties goes here.
     #

@@ -26,7 +26,7 @@
                 required: true,
                 label: false,
                 placeholder: "Email",
-                input_html: { 
+                input_html: {
                   autocomplete: "email",
                   class: "text-center input-background"
                    }%>
@@ -35,7 +35,7 @@
                 label: false,
                 placeholder: "Password",
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { 
+                input_html: {
                   autocomplete: "new-password",
                   class: "text-center input-background"
                    } %>
@@ -50,7 +50,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up", class:"btn btn-flat" %>
+    <%= f.button :submit, "Sign up", class:"btn btn-primary" %>
   </div>
 </div>
 <% end %>

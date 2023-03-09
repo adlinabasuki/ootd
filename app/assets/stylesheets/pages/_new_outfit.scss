@@ -2,9 +2,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
+
+  .image-card {
+    height: 180px;
+    width: 160px;
+    padding: 8px;
+
+    img {
+      width: 144px;
+      height: 144px;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 #new-outfit-container button {
   margin: 10px;
+}
+
+.arrow-container {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+}
+
+.arrow-container a {
+  display: block;
+}
+
+.fa-solid {
+  font-size: 30px;
 }
