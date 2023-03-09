@@ -14,8 +14,21 @@
     background: #DFDFDF;
     transition: background 0.3s ease;
     width: 17em;
+    margin: 0.5em;
   }
-  
+
+  .btn-secondary {
+    color: #1E1E1E;
+    border: 2.5px solid #1E1E1E;
+    // padding: 2em;
+    border-radius: 50px;
+    font-weight: bold;
+    background: #ac791a45;
+    transition: background 0.3s ease;
+    width: 17em;
+    margin: 0.5em;
+  }
+
   .btn-flat:hover {
     background: #1E1E1E;
     color: white;

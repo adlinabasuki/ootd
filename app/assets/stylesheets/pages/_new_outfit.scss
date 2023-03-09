@@ -8,3 +8,17 @@
 #new-outfit-container button {
   margin: 10px;
 }
+
+.arrow-container {
+  position: absolute;
+  top: -50px;
+  left: 25px;
+}
+
+.arrow-container a {
+  display: block;
+}
+
+.fa-solid {
+  font-size: 30px;
+}

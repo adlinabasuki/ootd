@@ -5,7 +5,7 @@
     align-items: center;
     height: 100vh;
   }
-  
+
   .simple_form {
     width: 100%;
     max-width: 600px;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .form-inputs {
     max-width: 17em;
     justify-content: center;
@@ -27,12 +27,12 @@
   .input-background {
     background-color: #DFDFDF;
   }
-  
+
   .form-actions {
     text-align: center;
     margin-top: 2.5em;
   }
-  
+
   .form-actions button {
     display: block;
     margin: 0 auto;
@@ -46,4 +46,5 @@
     text-align: center;
     background-color: #DFDFDF;
     border: 0px;
+    margin-bottom: 0.2em;
   }
