@@ -4,12 +4,12 @@
             <% count = 1 %>
             <% @outfit.items.each do |item|%>
                 <% if count.odd? %>
-                    <div class="image-cardleft">
+                    <div class="image-card tilted-left">
                         <%= cl_image_tag item.photo.key %>
                         <h6><b><%= item.name %></b></h6>
                     </div>
                 <% else %>
-                    <div class="image-cardright">
+                    <div class="image-card tilted-right">
                         <%= cl_image_tag item.photo.key %>
                         <h6><b><%= item.name %></b></h6>
                     </div>
