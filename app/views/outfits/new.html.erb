@@ -12,6 +12,6 @@
 
 
   <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
-  <%= link_to "REDO", new_outfit_path, class:"btn btn-secondary" %>
+  <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
 
 </div>
