@@ -18,7 +18,7 @@
                           index_filter_target: "type"
                         }
                       } %>
-      <%= form.select :item, Item::LAUNDRY_OPTIONS, {prompt: 'CLEAN AND DIRTY'},
+      <%#= form.select :item, Item::LAUNDRY_OPTIONS, {prompt: 'CLEAN AND DIRTY'},
                       {
                         class: "form-dropdown mb-1",
                         data: {
@@ -30,5 +30,5 @@
   </div>
 
     <%= render "index_grid", items: @items %>
-    
+
 </div>
