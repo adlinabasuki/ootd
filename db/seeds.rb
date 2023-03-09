@@ -6,11 +6,32 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# destroying all users
+
 require "open-uri"
 
+# --------------------------------DESTROYING -------------------------
+# Destroying all OutfitsItems
+puts "destroying all OutfitsItems"
+OutfitsItem.destroy_all
+puts "all OutfitsItems destroyed"
+
+
+# Destroying all Outfits
+puts "destroying all Outfits"
+Outfit.destroy_all
+puts "all Outfits destroyed"
+
+# Destroying all ItemOccasions
+puts "destroying all Itemoccasions"
 ItemsOccasion.destroy_all
+puts "all ItemOccasions destroyed"
+
+# Destroying all Items
+puts "destroying all Items"
 Item.destroy_all
+puts "all Items destroyed"
+
+# destroying all users
 puts "destroying all users"
 User.destroy_all
 puts "all users destroyed"
@@ -19,6 +40,8 @@ puts "all users destroyed"
 puts "destroying all occasions"
 Occasion.destroy_all
 puts "all occasions destroyed"
+
+# ------------------------------- CREATE -----------------------------
 
 #Creating users
 puts "creating users"
@@ -33,7 +56,6 @@ night = Occasion.create(name: "NIGHT OUT")
 casual = Occasion.create(name: "CASUAL")
 gym = Occasion.create(name: "GYM")
 puts "created #{Occasion.count} occasion"
-
 
 #Creating item
 puts "creating item"
@@ -67,6 +89,31 @@ file = URI.open("https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib
 item_six = Item.new(name: "Sneakers", type: "SHOE", user: stefany)
 item_six.photo.attach(io: file, filename: "item_six.png", content_type: "image/png")
 item_six.save
+
+file = URI.open("https://images.unsplash.com/photo-1591195853828-11db59a44f6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")
+item_seven = Item.new(name: "Jean Shorts", type: "BOTTOM", user: stefany)
+item_seven.photo.attach(io: file, filename: "item_seven.png", content_type: "image/png")
+item_seven.save
+
+file = URI.open("https://images.unsplash.com/photo-1602573991155-21f0143bb45c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1314&q=80")
+item_eight = Item.new(name: "Jogger", type: "BOTTOM", user: stefany)
+item_eight.photo.attach(io: file, filename: "item_eight.png", content_type: "image/png")
+item_eight.save
+
+file = URI.open("https://images.unsplash.com/photo-1618248945468-e07f3e70cdf6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")
+item_nine = Item.new(name: "Tank Top", type: "TOP", user: stefany)
+item_nine.photo.attach(io: file, filename: "item_nine.png", content_type: "image/png")
+item_nine.save
+
+file = URI.open("https://images.unsplash.com/photo-1603487742131-4160ec999306?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80")
+item_ten = Item.new(name: "Birkenstock", type: "SHOE", user: stefany)
+item_ten.photo.attach(io: file, filename: "item_ten.png", content_type: "image/png")
+item_ten.save
+
+file = URI.open("https://images.unsplash.com/photo-1603145733190-59811e523c72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80")
+item_eleven = Item.new(name: "Crocs", type: "SHOE", user: stefany)
+item_eleven.photo.attach(io: file, filename: "item_eleven.png", content_type: "image/png")
+item_eleven.save
 
 puts "created #{Item.count} items"
 
@@ -128,5 +175,34 @@ ItemsOccasion.create(
   occasion_id: gym.id
 )
 
-puts "created #{ItemsOccasion.count} occasion"
+ItemsOccasion.create(
+  item_id: item_seven.id,
+  occasion_id: casual.id
+)
 
+ItemsOccasion.create(
+  item_id: item_eight.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_nine.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_nine.id,
+  occasion_id: gym.id
+)
+
+ItemsOccasion.create(
+  item_id: item_ten.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_eleven.id,
+  occasion_id: casual.id
+)
+
+puts "created #{ItemsOccasion.count} occasion"
