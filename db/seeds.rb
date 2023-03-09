@@ -6,11 +6,22 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# destroying all users
+
 require "open-uri"
 
+# --------------------------------DESTROYING -------------------------
+
+# Destroying all ItemOccasions
+puts "destroying all Itemoccasions"
 ItemsOccasion.destroy_all
+puts "all ItemOccasions destroyed"
+
+# Destroying all Items
+puts "destroying all Items"
 Item.destroy_all
+puts "all Items destroyed"
+
+# destroying all users
 puts "destroying all users"
 User.destroy_all
 puts "all users destroyed"
@@ -19,6 +30,8 @@ puts "all users destroyed"
 puts "destroying all occasions"
 Occasion.destroy_all
 puts "all occasions destroyed"
+
+# ------------------------------- CREATE -----------------------------
 
 #Creating users
 puts "creating users"
@@ -129,4 +142,3 @@ ItemsOccasion.create(
 )
 
 puts "created #{ItemsOccasion.count} occasion"
-

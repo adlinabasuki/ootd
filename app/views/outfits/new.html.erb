@@ -1,4 +1,5 @@
 <div class="container" id="new-outfit-container">
+
   <%= link_to '<i class="fa-solid fa-arrow-left"></i>'.html_safe, dress_me_path %>
 
   <h1>Here is your outfit!</h1>
@@ -10,7 +11,7 @@
   <p><%= @shoe.name %></p>
 
 
-  <%= link_to "DRESS ME", affirmations_display_path, class:"btn btn-flat" %>
+  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-flat" %>
   <%= link_to "REDO", new_outfit_path, class:"btn btn-flat" %>
 
 </div>
