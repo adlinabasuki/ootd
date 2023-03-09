@@ -2,8 +2,8 @@ class OutfitsController < ApplicationController
   def new
     # TODO: filter on users
     # find the occasion instance (based on the user input)
-    occasion_name = params[:occasion]
-    selected_occasion = Occasion.find_by(name: occasion_name)
+    @occasion_name = params[:occasion]
+    selected_occasion = Occasion.find_by(name: @occasion_name)
     # randomize outfit based on occasion
 
     # filter through collection of all items with matching occasion
