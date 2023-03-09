@@ -5,13 +5,22 @@
 <div class="container" id="new-outfit-container">
 
   <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
-  <%= cl_image_tag @top.photo.key, height: 130, width: 130, crop: :fill %>
-  <p><%= @top.name %></p>
-  <%= cl_image_tag @bottom.photo.key, height: 130, width: 130, crop: :fill %>
-  <p><%= @bottom.name %></p>
-  <%= cl_image_tag @shoe.photo.key, height: 130, width: 130, crop: :fill %>
-  <p><%= @shoe.name %></p>
 
-  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-secondary" %>
-  <%= link_to "REDO", new_outfit_path, class:"btn btn-flat" %>
+  <div class="image-card tilted-left">
+    <%= cl_image_tag @top.photo.key %>
+    <h6><%= @top.name %></h6>
+  </div>
+  <div class="image-card tilted-right">
+    <%= cl_image_tag @bottom.photo.key %>
+    <h6><%= @bottom.name %></h6>
+  </div>
+  <div class="image-card tilted-left mb-3">
+    <%= cl_image_tag @shoe.photo.key %>
+    <h6><%= @shoe.name %></h6>
+  </div>
+
+  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
+  <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
+  <br>
+  <br>
 </div>

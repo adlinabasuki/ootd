@@ -43,7 +43,28 @@ a:hover {
     }
 }
 
-.image-cardleft {
+// .image-cardleft {
+//     background-color: #DFDFDF;
+//     height: 200px;
+//     width: 180px;
+//     padding: 10px;
+//     border: 1px solid #1E1E1E;
+//     box-sizing: border-box;
+//     text-align: center;
+//     transform: rotate(-5deg);
+
+//     img {
+//         width: 150px;
+//         height: 150px;
+//         display: block;
+//         margin: 0 auto;
+//         margin-bottom: 10px;
+//         object-position: center;
+//         object-fit: cover;
+//         }
+// }
+
+.image-card {
     background-color: #DFDFDF;
     height: 200px;
     width: 180px;
@@ -51,38 +72,25 @@ a:hover {
     border: 1px solid #1E1E1E;
     box-sizing: border-box;
     text-align: center;
-    transform: rotate(-5deg);
+    // transform: rotate(5deg);
 
     img {
-        width: 150px;
-        height: 150px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        object-position: center;
-        object-fit: cover;
-        }
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      object-position: center;
+      object-fit: cover;
+    }
 }
 
-.image-cardright {
-    background-color: #DFDFDF;
-    height: 200px;
-    width: 180px;
-    padding: 10px;
-    border: 1px solid #1E1E1E;
-    box-sizing: border-box;
-    text-align: center;
-    transform: rotate(5deg);
+.tilted-right {
+  transform: rotate(5deg);
+}
 
-    img {
-        width: 150px;
-        height: 150px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        object-position: center;
-        object-fit: cover;
-        }
+.tilted-left {
+  transform: rotate(-5deg);
 }
 
 .outfit-container {
