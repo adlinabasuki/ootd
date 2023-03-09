@@ -12,6 +12,8 @@ a:hover {
 .image-box {
     box-sizing: border-box;
     overflow: hidden;
+    padding: 30px;
+    // object-fit: contain;
 }
 
 .affirmation-texts {
@@ -26,15 +28,60 @@ a:hover {
     height: 200px;
     width: 180px;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 0.5px solid #1E1E1E;
+    border: 1px solid #1E1E1E;
     box-sizing: border-box;
+    text-align: center;
 
     img {
-        max-width: 160px;
+        width: 150px;
         height: 150px;
         display: block;
         margin: 0 auto;
+        margin-bottom: 10px;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+.image-cardleft {
+    background-color: #DFDFDF;
+    height: 200px;
+    width: 180px;
+    padding: 10px;
+    border: 1px solid #1E1E1E;
+    box-sizing: border-box;
+    text-align: center;
+    transform: rotate(-5deg);
+
+    img {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        object-position: center;
+        object-fit: cover;
+        }
+}
+
+.image-cardright {
+    background-color: #DFDFDF;
+    height: 200px;
+    width: 180px;
+    padding: 10px;
+    border: 1px solid #1E1E1E;
+    box-sizing: border-box;
+    text-align: center;
+    transform: rotate(5deg);
+
+    img {
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        object-position: center;
+        object-fit: cover;
         }
 }
 
@@ -42,7 +89,7 @@ a:hover {
     padding: 10px;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 40px;
+    margin-bottom: 66px;
 }
 
 .centered-content {
