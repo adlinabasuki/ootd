@@ -5,7 +5,6 @@ body {
 }
 
 .home-page-container {
-  // overflow: hidden;
   background-color: #ffffffa8;
   background-blend-mode: overlay;
   background-image: url("landing-page-2.png");
@@ -28,4 +27,8 @@ body {
 
 .margin-topper {
   margin-top: 20px;
+}
+
+.page-links {
+  margin-top: 10vh;
 }
