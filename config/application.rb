@@ -18,6 +18,7 @@ module Ootd
 
     config.hosts << /(.*\.)?eu.ngrok.io/
     config.hosts << /(.*\.)?ootd.herokuapp.com/
+    config.hosts << /(.*\.)?outfitoftheday.online/
 
 
     # Configuration for the application, engines, and railties goes here.
