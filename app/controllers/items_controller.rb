@@ -4,6 +4,8 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit]
 
   def index
+    # TODO: Add fileter so only current users outfits are picked up
+    
     @items = params[:type] == "" || params[:type].nil? ? Item.all : Item.where(type: params[:type])
     respond_to do |format|
       format.html # Follow regular flow of Rails

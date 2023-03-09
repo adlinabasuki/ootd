@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :items
-  resources :outfits, only: [:new, :create]
+  resources :outfits, only: [:new] do
+    member do
+      get "affirmations/display", to: "affirmations#display"
+    end
+  end
 
   get "dress_me", to: "outfits#dress_me"
-  get "affirmations/display", to: "affirmations#display"
 end

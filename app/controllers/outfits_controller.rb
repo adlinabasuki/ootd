@@ -6,30 +6,34 @@ class OutfitsController < ApplicationController
     # randomize outfit based on occasion
     # filter through collection of all tops with matching occasion
     @items = Item.joins(:items_occasions).where(items_occasions: { occasion: selected_occasion })
-    @tops = @items.where(type: "Top")
+    @tops = @items.where(type: "TOP")
     # select one top-occasion randomly
     @top = @tops.sample
     # filter through collection of all bottoms with matching occasion
-    @bottoms = @items.where(type: "Bottom")
+    @bottoms = @items.where(type: "BOTTOM")
     # select one bottom-occasion randomly
     @bottom = @bottoms.sample
     # filter through collection of all shoes with matching occasion
-    @shoes = @items.where(type: "Shoe")
+    @shoes = @items.where(type: "SHOE")
     # select one shoe-occasion randomly
     @shoe = @shoes.sample
 
+    # Creating an outfit
+    @outfit = Outfit.create(user: current_user)
+    OutfitsItem.create(
+      item_id: @top.id,
+      outfit_id: @outfit.id
+    )
+    OutfitsItem.create(
+      item_id: @bottom.id,
+      outfit_id: @outfit.id
+    )
+    OutfitsItem.create(
+      item_id: @shoe.id,
+      outfit_id: @outfit.id
+    )
     # if @type is nil, randomize type from closet
     # result should return top, bottom and shoe that are tagged with selected occasion
-
-    @user = current_user
-    @occasions = Occasion.all
-    @occasions_name = []
-    @occasions.each do |occasion|
-      @occasions_name << occasion.name
-    end
-  end
-
-  def create
   end
 
   def dress_me

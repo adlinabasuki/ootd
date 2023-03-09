@@ -1,14 +1,12 @@
 <div class="container" id="new-outfit-container">
-  <%= form_with url: "/outfits/new", method: :get do |form| %>
-    <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
-  <% end %>
 
-  <p>Top</p>
-  <p>Bottom</p>
-  <p>Shoe</p>
+  <p><%= @top.name %></p>
+  <p><%= @bottom.name %></p>
+  <p><%= @shoe.name %></p>
 
 
-  <%= link_to "DRESS ME", affirmations_display_path, class:"btn btn-flat" %>
+  <%#= link_to "DRESS ME", affirmations_display_path, class:"btn btn-flat" %>
+  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-flat" %>
   <%= link_to "REDO", new_outfit_path, class:"btn btn-flat" %>
 
 </div>
