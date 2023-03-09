@@ -1,3 +1,58 @@
+a {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-weight: 400;
+    // text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.image-box {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.affirmation-texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.image-card {
+    background-color: #DFDFDF;
+    height: 200px;
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0.5px solid #1E1E1E;
+    box-sizing: border-box;
+
+    img {
+        max-width: 160px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+        }
+}
+
+.outfit-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .card-container {
     text-decoration: none;
     display: grid;
@@ -7,32 +62,17 @@
     flex-wrap: wrap;
   }
 
-  a {
-    font-family: "Inter", Helvetica, sans-serif;
-    font-weight: 400;
-    // text-decoration: underline;
-    color: black;
-  }
-
-  a:hover {
-    color: black;
-  }
-
   .card {
     border-radius: 5px;
-    // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     flex: 1 1 300px;
-    // overflow: hidden;
     transition: all 0.3s ease-in-out;
   }
 
   .card:hover {
     border: 2px solid #1e1e1e10;
-    // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
   }
 
