@@ -4,7 +4,17 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit]
 
   def index
-    @items = Item.all
+    @items = params[:type] == "" || params[:type].nil? ? Item.all : Item.where(type: params[:type])
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.json { render json: @items.to_json }
+      format.text { render partial: "items/index_grid", locals: { items: @items }, formats: [:html] }
+    end
+    @occasions = Occasion.all
+    @occasions_name = []
+    @occasions.each do |occasion|
+      @occasions_name << occasion.name
+    end
   end
 
   def new
