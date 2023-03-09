@@ -21,6 +21,16 @@ puts "destroying all Outfits"
 Outfit.destroy_all
 puts "all Outfits destroyed"
 
+# Destroying all OutfitsItems
+puts "destroying all OutfitsItems"
+OutfitsItem.destroy_all
+puts "all OutfitsItems destroyed"
+
+# Destroying all Outfits
+puts "destroying all Outfits"
+Outfit.destroy_all
+puts "all Outfits destroyed"
+
 # Destroying all ItemOccasions
 puts "destroying all Itemoccasions"
 ItemsOccasion.destroy_all

@@ -12,8 +12,6 @@
   <%= cl_image_tag @shoe.photo.key, height: 130, width: 130, crop: :fill %>
   <p><%= @shoe.name %></p>
 
-
   <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-secondary" %>
   <%= link_to "REDO", new_outfit_path, class:"btn btn-flat" %>
-
 </div>
