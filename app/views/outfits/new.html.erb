@@ -1,8 +1,10 @@
+<div class="arrow-container">
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i>'.html_safe, dress_me_path %>
+</div>
+
 <div class="container" id="new-outfit-container">
 
-  <%= link_to '<i class="fa-solid fa-arrow-left"></i>'.html_safe, dress_me_path %>
-
-  <h1>Here is your outfit!</h1>
+  <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
   <%= cl_image_tag @top.photo.key, height: 130, width: 130, crop: :fill %>
   <p><%= @top.name %></p>
   <%= cl_image_tag @bottom.photo.key, height: 130, width: 130, crop: :fill %>
@@ -10,8 +12,6 @@
   <%= cl_image_tag @shoe.photo.key, height: 130, width: 130, crop: :fill %>
   <p><%= @shoe.name %></p>
 
-
-  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
-  <%= link_to "REDO", new_outfit_path, class:"btn btn-secondary" %>
-
+  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-secondary" %>
+  <%= link_to "REDO", new_outfit_path, class:"btn btn-flat" %>
 </div>

@@ -7,7 +7,7 @@
   <div class="occasion-selector mt-5">
     <%= form_with url: "/outfits/new", method: :get do |form| %>
       <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
-      <%= form.submit "LET'S GO!", class: "btn-primary mt-3" %>
+      <%= form.submit "LET'S GO!", class: "btn btn-secondary" %>
     <% end %>
   </div>
 
@@ -16,6 +16,6 @@
 
   <h2>Add a new item</h2>
   <%= button_to "ADD", new_item_path,
-      :class => "btn-secondary mt-2",
+      :class => "btn btn-flat",
       :method => :get %>
 </div>
