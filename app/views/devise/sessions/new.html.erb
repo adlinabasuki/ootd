@@ -1,6 +1,6 @@
 <%# <h2>Log in</h2> %>
 <div class="container">
-  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 11em;") %>
+  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 14em; margin-bottom: 3em") %>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
     <div class="form-inputs">
@@ -9,17 +9,17 @@
                   autofocus: true,
                   label: false,
                   placeholder: "Email",
-                  input_html: { 
+                  input_html: {
                     autocomplete: "email",
-                    class: "text-center"
+                    class: "text-center input-background"
                   } %>
       <%= f.input :password,
                   required: false,
                   label: false,
                   placeholder: "Password",
-                  input_html: { 
+                  input_html: {
                     autocomplete: "current-password",
-                    class: "text-center"
+                    class: "text-center input-background"
                   } %>
       <%# <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>

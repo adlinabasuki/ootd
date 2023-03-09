@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   has_one_attached :photo
 
   TYPE_OPTIONS = ["TOP", "BOTTOM", "SHOE"]
+  LAUNDRY_OPTIONS = ["CLEAN", "DIRTY"]
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :type, :photo, presence: true
