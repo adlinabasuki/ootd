@@ -5,27 +5,37 @@ class ItemsController < ApplicationController
 
   def index
     # TODO: Add fileter so only current users outfits are picked up
-    
-    @items = params[:type] == "" || params[:type].nil? ? Item.all : Item.where(type: params[:type])
+
+    # Below is just used so the dropdown know what to display
+    @occasions_name = occasion_name_array
+    type = params[:type]
+    occasion = params[:occasion]
+    no_types = type.nil? || type == ""
+    no_occasions = occasion.nil? || occasion == ""
+
+    if no_types && no_occasions
+      @items = Item.all
+    elsif type != "" && no_occasions
+      @items = Item.where(type: type)
+    elsif no_types && occasion != ""
+      occasion = Occasion.find_by_name(occasion)
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion })
+    else
+      occasion = Occasion.find_by_name(occasion)
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).and(Item.where(type: type))
+    end
+
+    # this part rerender the index grid based on selections in the dropdown stored in @items
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.json { render json: @items.to_json }
       format.text { render partial: "items/index_grid", locals: { items: @items }, formats: [:html] }
     end
-    @occasions = Occasion.all
-    @occasions_name = []
-    @occasions.each do |occasion|
-      @occasions_name << occasion.name
-    end
   end
 
   def new
     @item = Item.new
-    @occasions = Occasion.all
-    @occasions_name = []
-    @occasions.each do |occasion|
-      @occasions_name << occasion.name
-    end
+    @occasions_name = occasion_name_array
   end
 
   def create
@@ -62,5 +72,14 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :type, :photo)
+  end
+
+  def occasion_name_array
+    @occasions = Occasion.all
+    occasions_name = []
+    @occasions.each do |occasion|
+      occasions_name << occasion.name
+    end
+    return occasions_name
   end
 end
