@@ -52,3 +52,19 @@
     border: none;
     margin-bottom: 0.2em;
   }
+
+  .form-dropdown-half-screen {
+    height: 1.7em;
+    width: 43.5vw;
+    font-weight: 500;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #DFDFDF;
+    border: 0px;
+    margin-bottom: 0.2em;
+  }
+
+  .form-filter-div {
+    display: flex;
+    justify-content: space-between;
+  }
