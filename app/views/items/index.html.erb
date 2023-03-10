@@ -1,10 +1,10 @@
 <div data-controller="index-filter", class="container">
   <div class="filter-index mt-3 mb-3">
-    <p>Filter by:</p>
-    <%= form_with url: "/items", method: :get, html: { data: {index_filter_target: "form"} } do |form| %>
+    <p><strong>Filter by:</strong></p>
+    <%= form_with url: "/items", method: :get, html: { data: {index_filter_target: "form"}, class: "form-filter-div" } do |form| %>
       <%= form.select :occasion, @occasions_name, { prompt: 'ALL OCCASIONS' },
                       {
-                        class: "form-dropdown mb-1",
+                        class: "form-dropdown-half-screen mb-1 col-6",
                         data: {
                           action: "change->index-filter#update",
                           index_filter_target: "occasion"
@@ -12,7 +12,7 @@
                       } %>
       <%= form.select :item, Item::TYPE_OPTIONS, {prompt: 'ALL TYPES'},
                       {
-                        class: "form-dropdown mb-1",
+                        class: "form-dropdown-half-screen mb-1 col-6",
                         data: {
                           action: "change->index-filter#update",
                           index_filter_target: "type"
