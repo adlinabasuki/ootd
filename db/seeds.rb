@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
 require "open-uri"
 
 # --------------------------------DESTROYING -------------------------
@@ -14,7 +13,6 @@ require "open-uri"
 puts "destroying all OutfitsItems"
 OutfitsItem.destroy_all
 puts "all OutfitsItems destroyed"
-
 
 # Destroying all Outfits
 puts "destroying all Outfits"
@@ -41,25 +39,27 @@ puts "destroying all Items"
 Item.destroy_all
 puts "all Items destroyed"
 
-# destroying all users
+# Destroying all users
 puts "destroying all users"
 User.destroy_all
 puts "all users destroyed"
 
-#destroy all Occasions
+# Destroy all Occasions
 puts "destroying all occasions"
 Occasion.destroy_all
 puts "all occasions destroyed"
 
 # ------------------------------- CREATE -----------------------------
 
-#Creating users
+# Creating users
 puts "creating users"
 stefany = User.new(first_name: "Stefany", last_name: "Noguera", email: "stefany@gmail.com", password: "password")
 stefany.save
+julia = User.new(first_name: "Julia", last_name: "Thuden", email: "julia@gmail.com", password: "password")
+julia.save
 puts "created #{User.count} users"
 
-#Creating occasions
+# Creating occasions
 puts "creating occasions"
 work = Occasion.create(name: "WORK")
 night = Occasion.create(name: "NIGHT OUT")
@@ -67,9 +67,10 @@ casual = Occasion.create(name: "CASUAL")
 gym = Occasion.create(name: "GYM")
 puts "created #{Occasion.count} occasion"
 
-#Creating item
+# Creating item
 puts "creating item"
 
+# Items for Stefany
 file = URI.open("https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80")
 item_one = Item.new(name: "Jeans", type: "BOTTOM", user: stefany)
 item_one.photo.attach(io: file, filename: "item_one.png", content_type: "image/png")
@@ -125,11 +126,33 @@ item_eleven = Item.new(name: "Crocs", type: "SHOE", user: stefany)
 item_eleven.photo.attach(io: file, filename: "item_eleven.png", content_type: "image/png")
 item_eleven.save
 
+# Items for Julia
+file = URI.open("https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
+item_twelve = Item.new(name: "White T-shirt", type: "TOP", user: julia)
+item_twelve.photo.attach(io: file, filename: "item_twelve.png", content_type: "image/png")
+item_twelve.save
+
+file = URI.open("https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80")
+item_thirteen = Item.new(name: "Fav Jeans", type: "BOTTOM", user: julia)
+item_thirteen.photo.attach(io: file, filename: "item_thirteen.png", content_type: "image/png")
+item_thirteen.save
+
+file = URI.open("https://plus.unsplash.com/premium_photo-1671149028241-8e25ffee90dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80")
+item_fourteen = Item.new(name: "Black and white skirt", type: "BOTTOM", user: julia)
+item_fourteen.photo.attach(io: file, filename: "item_fourteen.png", content_type: "image/png")
+item_fourteen.save
+
+file = URI.open("https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80")
+item_fifteen = Item.new(name: "Shirt with spots", type: "TOP", user: julia)
+item_fifteen.photo.attach(io: file, filename: "item_fifteen.png", content_type: "image/png")
+item_fifteen.save
+
 puts "created #{Item.count} items"
 
 # Create Items occasion
 puts "creating items occasions"
 
+# Item occasions for Stefany
 ItemsOccasion.create(
   item_id: item_one.id,
   occasion_id: casual.id
@@ -212,6 +235,47 @@ ItemsOccasion.create(
 
 ItemsOccasion.create(
   item_id: item_eleven.id,
+  occasion_id: casual.id
+)
+
+# Item occasions for Julia
+ItemsOccasion.create(
+  item_id: item_twelve.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_twelve.id,
+  occasion_id: work.id
+)
+
+ItemsOccasion.create(
+  item_id: item_thirteen.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_fourteen.id,
+  occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_fourteen.id,
+  occasion_id: work.id
+)
+
+ItemsOccasion.create(
+  item_id: item_fourteen.id,
+  occasion_id: night.id
+)
+
+ItemsOccasion.create(
+  item_id: item_fifteen.id,
+  occasion_id: work.id
+)
+
+ItemsOccasion.create(
+  item_id: item_fifteen.id,
   occasion_id: casual.id
 )
 
