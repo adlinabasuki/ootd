@@ -1,5 +1,15 @@
   <div data-index-filter-target="grid", class="index-container row">
-    <% items.each do |item| %>
-      <%= render "index_card", item: item %>
+    <% if @items.nil? %>
+      <div class="d-flex", style="justify-content:center;">
+        <div class= "no-items-message">
+          <h2>You don't have any clothes in these catagories</h2>
+          <br>
+          <i class="fa-solid fa-heart-crack"></i>
+        </div>
+      </div>
+    <% else %>
+      <% items.each do |item| %>
+        <%= render "index_card", item: item %>
+      <% end %>
     <% end %>
   </div>
