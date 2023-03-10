@@ -1,2 +1,29 @@
-<h1>here is an item</h1>
-<%= @item.name %>
+<div class="container mt-4">
+  <div class="item-top-div">
+    <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="edit-destroy-div">
+      <%= link_to edit_item_path(@item) do %>
+        <%= image_tag "pen.png", alt: "edit", class: "type-item-icon" %>
+      <% end %>
+      <%= image_tag "bin.png", alt: "delete", class: "type-item-icon" %>
+    </div>
+  </div>
+  <div class="item-show-div mt-5">
+    <h1><%= @item.name %></h1>
+    <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-5" %>
+    <div class="item-show-info mt-3">
+      <div class="item-occasions">
+      <%# to be updated %>
+        <p>Work</p>
+        <p>Casual</p>
+      </div>
+      <% if @item.type == "TOP" %>
+        <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon" %>
+      <% elsif @item.type == "BOTTOM" %>
+        <%= image_tag "trousers.png", alt: "trousers", class: "type-item-icon" %>
+      <% else %>
+        <%= image_tag "sneakers.png", alt: "sneakers", class: "type-item-icon" %>
+      <% end %>
+    </div>
+  </div>
+</div>
