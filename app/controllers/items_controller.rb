@@ -14,15 +14,15 @@ class ItemsController < ApplicationController
     no_occasions = occasion.nil? || occasion == ""
 
     if no_types && no_occasions
-      @items = Item.all
+      @items = Item.all.where(user: current_user)
     elsif type != "" && no_occasions
-      @items = Item.where(type: type)
+      @items = Item.where(type: type).where(user: current_user)
     elsif no_types && occasion != ""
       occasion = Occasion.find_by_name(occasion)
-      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion })
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).where(user: current_user)
     else
       occasion = Occasion.find_by_name(occasion)
-      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).and(Item.where(type: type))
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).and(Item.where(type: type)).where(user: current_user)
     end
 
     # this part rerender the index grid based on selections in the dropdown stored in @items
