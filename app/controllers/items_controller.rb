@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     elsif no_types && occasion != ""
       occasion = Occasion.find_by_name(occasion)
       @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).where(user: current_user)
-    elsif no_occasions && type != ""
+    elsif occasion != "" && type != ""
       occasion = Occasion.find_by_name(occasion)
       @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).and(Item.where(type: type)).where(user: current_user)
     else
