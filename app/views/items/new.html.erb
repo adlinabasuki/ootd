@@ -3,13 +3,13 @@
     <h1 class="container text-center">Add new item</h1>
     <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
       <div class="form-inputs">
-        <%= f.input :name %>
+        <%= f.input :name, autofocus: true, input_html: {class: "text-center input-background"} %>
 
-        <%= f.input :type, collection: Item::TYPE_OPTIONS %>
+        <%= f.input :type, collection: Item::TYPE_OPTIONS, autofocus: true, input_html: {class: "text-center input-background"}%>
 
-        <%= f.input :items_occasions, collection: @occasions, input_html: {multiple: true, data: {controller: "tom-select"}} %>
+        <%= f.input :items_occasions, collection: @occasions, autofocus: true, input_html: {class: "text-center input-background", multiple: true, data: {controller: "tom-select"}} %>
 
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file, input_html: {class: "input-background"} %>
       </div>
       <div class="form-actions" style="text-align: center;">
         <%= f.button :submit, value: 'Add', class: 'btn btn-primary' %>
