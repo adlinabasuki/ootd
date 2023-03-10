@@ -13,9 +13,9 @@
     <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-5" %>
     <div class="item-show-info mt-3">
       <div class="item-occasions">
-      <%# to be updated %>
-        <p>Work</p>
-        <p>Casual</p>
+        <% @occasions_name.each do |occasion| %>
+          <p><%= occasion %></p>
+        <% end %>
       </div>
       <% if @item.type == "TOP" %>
         <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon" %>
