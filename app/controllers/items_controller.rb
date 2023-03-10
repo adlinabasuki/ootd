@@ -55,6 +55,11 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @occasions = Occasion.joins(:items_occasions).where(items_occasions: { item: @item })
+    @occasions_name = []
+    @occasions.each do |occasion|
+      @occasions_name << occasion.name
+    end
   end
 
   def edit
