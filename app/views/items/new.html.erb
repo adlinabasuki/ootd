@@ -1,16 +1,17 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
   <div style="width: 70%">
-    <h1 class="text-center">Add new item</h1>
+    <h1 class="container text-center">Add new item</h1>
     <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
-      <%= f.input :name %>
+      <div class="form-inputs">
+        <%= f.input :name %>
 
-      <%= f.input :type, collection: Item::TYPE_OPTIONS %>
+        <%= f.input :type, collection: Item::TYPE_OPTIONS %>
 
-      <%= f.input :items_occasions, collection: @occasions, input_html: { multiple: true } %>
+        <%= f.input :items_occasions, collection: @occasions, input_html: {multiple: true, data: {controller: "tom-select"}} %>
 
-      <%= f.input :photo, as: :file %>
-
-      <div style="text-align: center;">
+        <%= f.input :photo, as: :file %>
+      </div>
+      <div class="form-actions" style="text-align: center;">
         <%= f.button :submit, value: 'Add', class: 'btn btn-primary' %>
       </div>
     <% end %>
