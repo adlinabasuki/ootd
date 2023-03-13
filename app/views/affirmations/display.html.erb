@@ -18,13 +18,51 @@
             <% end %>
         </div>
 
-        <div class="affirmation-texts">
+        <%# <div class="affirmation-texts">
             <div class="text-box text-center">
             <br>
                 <h1>You're a style ✨icon✨</h1>
                 <br>
                 <h2>Your outfit today is on point!</h2>
             </div>
+        </div> %>
+        <div class="affirmation-texts">
+          <div class="text-box text-center">
+            <br>
+            <h1 id="dynamicH1"></h1>
+            <br>
+            <h2 id="dynamicH2"></h2>
+          </div>
         </div>
-    </div>
+
+        <script>
+        // Create an array of phrases
+        const phrases = [
+          "You're a fashionista!",
+          "You have a great sense of style!",
+          "Your fashion game is strong!",
+          "You're a trendsetter!",
+          "You're a style guru!",
+          "You're a style ✨icon✨"
+        ];
+
+        const phrases2 = [
+          "You look absolutely stunning in that outfit!",
+          "Your outfit exudes confidence and radiates positivity",
+          "You're rocking that outfit like a boss!",
+          "Your outfit is on fleek and so are you!"
+        ]
+
+        // Generate a random index to select a random phrase from the array
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        const randomIndex2 = Math.floor(Math.random() * phrases2.length);
+
+        // Select the H1 and H2 elements and update their text content with the random phrase
+        const dynamicH1 = document.getElementById("dynamicH1");
+        const dynamicH2 = document.getElementById("dynamicH2");
+        dynamicH1.textContent = phrases[randomIndex];
+        dynamicH2.textContent = phrases2[randomIndex2];
+        </script>
+
+          </div>
 </div>
