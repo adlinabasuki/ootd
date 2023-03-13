@@ -55,15 +55,18 @@
   .ts-control {
     border: none;
     margin-bottom: 0.2em;
-    background-color: #DFDFDF;
+    // background-color: #DFDFDF;
+    background: #DFDFDF;
 
     input {
       text-align: center;
     }
   }
 
-  .ts-wrapper {
-
+  .ts-wrapper.single.input-active {
+    .ts-control {
+    background-color: #DFDFDF;
+    }
   }
 
   .form-dropdown-half-screen {
