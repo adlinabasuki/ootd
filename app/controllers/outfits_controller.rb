@@ -22,7 +22,7 @@ class OutfitsController < ApplicationController
     @shoe = @shoes.sample
 
     # Creating an outfit
-    #unless @top.nil? || @bottom.nil? || @shoe.nil? do
+    unless @top.nil? || @bottom.nil? || @shoe.nil?
       @outfit = Outfit.create(user: current_user)
       OutfitsItem.create(
         item_id: @top.id,
@@ -36,7 +36,7 @@ class OutfitsController < ApplicationController
         item_id: @shoe.id,
         outfit_id: @outfit.id
       )
-    #end
+    end
   end
 
   def dress_me
@@ -47,4 +47,5 @@ class OutfitsController < ApplicationController
       @occasions_name << occasion.name
     end
   end
+
 end
