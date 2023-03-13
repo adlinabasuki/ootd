@@ -17,13 +17,17 @@
       width: 124px;
       height: 124px;
       margin-bottom: 5px;
+      display: block;
+      margin: 0 auto;
+      object-position: center;
+      object-fit: cover;
+    }
+
+    h6 {
+      margin-top: 5px;
     }
   }
 }
-
-// #new-outfit-container button {
-//   margin: 10px;
-// }
 
 .arrow-container {
   position: absolute;

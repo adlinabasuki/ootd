@@ -22,21 +22,21 @@ class OutfitsController < ApplicationController
     @shoe = @shoes.sample
 
     # Creating an outfit
-    @outfit = Outfit.create(user: current_user)
-    OutfitsItem.create(
-      item_id: @top.id,
-      outfit_id: @outfit.id
-    )
-    OutfitsItem.create(
-      item_id: @bottom.id,
-      outfit_id: @outfit.id
-    )
-    OutfitsItem.create(
-      item_id: @shoe.id,
-      outfit_id: @outfit.id
-    )
-    # if @type is nil, randomize type from closet
-    # result should return top, bottom and shoe that are tagged with selected occasion
+    #unless @top.nil? || @bottom.nil? || @shoe.nil? do
+      @outfit = Outfit.create(user: current_user)
+      OutfitsItem.create(
+        item_id: @top.id,
+        outfit_id: @outfit.id
+      )
+      OutfitsItem.create(
+        item_id: @bottom.id,
+        outfit_id: @outfit.id
+      )
+      OutfitsItem.create(
+        item_id: @shoe.id,
+        outfit_id: @outfit.id
+      )
+    #end
   end
 
   def dress_me
