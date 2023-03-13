@@ -1,18 +1,17 @@
 <div class="home-page-container home-page-content centered-container" onclick="location.href=' <%= dress_me_path %> '">
   <div class="" >
     <%= image_tag "ootd_logo.png", height: 170, alt: "ootd_logo" %>
-    <p class="margin-topper"><strong>LOOK GOOD FEEL GOOD</strong></p>
-    <p class="no-margin-text"><strong>Start Your Day Right With</strong></p>
-    <p><strong>Outfit Öf The Day</strong></p>
+    <h6 class="margin-topper"><strong>LOOK GOOD FEEL GOOD</strong></h6>
+    <h6 class="no-margin-text"><strong>Start Your Day Right With</strong></h6>
+    <h6><strong>Outfit Öf The Day</strong></h6>
 
   </div>
 </div>
-<div class="page-links">
-  <% if user_signed_in? %>
-    <%= link_to "LOGOUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-  <% else %>
-    <%= link_to "LOGIN", user_session_path %>
-    <br>
-    <%= link_to "Sign up", new_user_registration_path, class: "btn-undeline" %>
-  <% end %>
-</div>
+  <div class="page-links">
+    <% if user_signed_in? %>
+      <%= link_to "LOGOUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+    <% else %>
+      <%= link_to "LOGIN", user_session_path %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn-undeline" %>
+    <% end %>
+  </div>
