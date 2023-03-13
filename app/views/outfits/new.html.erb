@@ -4,15 +4,15 @@
 <div class="container" id="new-outfit-container">
   <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
 
-  <div class="image-card tilted-left">
+  <div class="image-card-new-outfit tilted-left">
     <%= cl_image_tag @top.photo.key %>
     <h6><%= @top.name %></h6>
   </div>
-  <div class="image-card tilted-right">
+  <div class="image-card-new-outfit tilted-right">
     <%= cl_image_tag @bottom.photo.key %>
     <h6><%= @bottom.name %></h6>
   </div>
-  <div class="image-card tilted-left mb-3">
+  <div class="image-card-new-outfit tilted-left mb-3">
     <%= cl_image_tag @shoe.photo.key %>
     <h6><%= @shoe.name %></h6>
   </div>

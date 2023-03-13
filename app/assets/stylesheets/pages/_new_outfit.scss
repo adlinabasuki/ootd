@@ -4,14 +4,18 @@
   align-items: center;
   // margin-top: 2vh;
 
-  .image-card {
-    height: 180px;
-    width: 160px;
+  .image-card-new-outfit {
+    height: 160px;
+    width: 145px;
     padding: 8px;
+    background-color: #DFDFDF;
+    border: 1px solid #1E1E1E;
+    box-sizing: border-box;
+    text-align: center;
 
     img {
-      width: 144px;
-      height: 144px;
+      width: 124px;
+      height: 124px;
       margin-bottom: 5px;
     }
   }
