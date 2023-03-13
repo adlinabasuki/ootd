@@ -1,7 +1,7 @@
 # require 'cloudinary'
 
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     # TODO: Add fileter so only current users outfits are picked up
@@ -66,6 +66,9 @@ class ItemsController < ApplicationController
   end
 
   def update
+    @item.update(item_params)
+
+    redirect_to item_path(@item)
   end
 
   def destroy
