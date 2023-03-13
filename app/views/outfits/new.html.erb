@@ -3,7 +3,14 @@
 </div>
 <div class="container" id="new-outfit-container">
   <% if @top.nil? || @bottom.nil? ||@shoe.nil? %>
-    <h2>You don't have enough items to build an outfit for this occasion</h2>
+    <div class= "no-items-message">
+      <h2>You don't have enough items to build an outfit for this occasion</h2>
+      <br>
+      <i class="fa-solid fa-heart-crack"></i>
+      <h2 class="mt-5">Add more items</h2>
+      <%= link_to "ADD", new_item_path, class:"btn btn-primary" %>
+      <h6 class="mt-5">Or update your <%= link_to "wardrobe", items_path, class: "underlined-link"%></h6>
+    </div>
   <% else %>
     <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
     <div class="image-card-new-outfit tilted-left">
