@@ -1,6 +1,6 @@
 <div data-controller="index-filter", class="container">
   <div class="filter-index mt-3 mb-3">
-    <p><strong>Filter by:</strong></p>
+    <h6><strong>Filter by:</strong></h6>
     <%= form_with url: "/items", method: :get, html: { data: {index_filter_target: "form"}, class: "form-filter-div" } do |form| %>
       <%= form.select :occasion, @occasions_name, { prompt: 'ALL OCCASIONS' },
                       {
@@ -28,7 +28,7 @@
                       } %>
     <% end %>
   </div>
-
-    <%= render "index_grid", items: @items %>
-
+  <%= render "index_grid", items: @items %>
+  <div class="navbar-space">
+  </div>
 </div>

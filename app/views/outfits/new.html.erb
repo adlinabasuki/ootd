@@ -1,26 +1,25 @@
-<div class="arrow-container">
-  <%= link_to '<i class="fa-solid fa-arrow-left"></i>'.html_safe, dress_me_path %>
+<div class="item-top-div mt-3">
+  <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
 </div>
-
 <div class="container" id="new-outfit-container">
-
   <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
 
-  <div class="image-card tilted-left">
+  <div class="image-card-new-outfit tilted-left">
     <%= cl_image_tag @top.photo.key %>
     <h6><%= @top.name %></h6>
   </div>
-  <div class="image-card tilted-right">
+  <div class="image-card-new-outfit tilted-right">
     <%= cl_image_tag @bottom.photo.key %>
     <h6><%= @bottom.name %></h6>
   </div>
-  <div class="image-card tilted-left mb-3">
+  <div class="image-card-new-outfit tilted-left mb-3">
     <%= cl_image_tag @shoe.photo.key %>
     <h6><%= @shoe.name %></h6>
   </div>
-
-  <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
-  <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
-  <br>
-  <br>
+  <div class="button-container-div">
+    <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
+    <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
+  </div>
+  <div class="navbar-space">
+  </div>
 </div>

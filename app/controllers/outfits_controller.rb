@@ -7,7 +7,7 @@ class OutfitsController < ApplicationController
     # randomize outfit based on occasion
 
     # filter through collection of all items with matching occasion
-    @items = Item.joins(:items_occasions).where(items_occasions: { occasion: selected_occasion })
+    @items = Item.joins(:items_occasions).where(items_occasions: { occasion: selected_occasion }).where(user: current_user)
     # filter through collection of all tops with matching occasion
     @tops = @items.where(type: "TOP")
     # select one top-occasion randomly

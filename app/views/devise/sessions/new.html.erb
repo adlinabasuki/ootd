@@ -1,6 +1,8 @@
-<%# <h2>Log in</h2> %>
 <div class="container">
-  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 14em; margin-bottom: 3em") %>
+  <div class="item-top-div mt-3">
+    <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+  </div>
+  <%= image_tag("ootd_logo.png", style: "width: 7em; height: 5em; display: block; margin: 0 auto; margin-top: 8em; margin-bottom: 3em") %>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
     <div class="form-inputs">
@@ -25,11 +27,11 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in", class:"btn btn-primary" %>
+      <%= f.button :submit, "LOG IN", class:"btn btn-primary" %>
     </div>
   <% end %>
 
-  <div class="text-center" style="padding-top: 12em;">
+  <div class="text-center" style="padding-top: 10em;">
     <%= render "devise/shared/links" %>
   </div>
 </div>

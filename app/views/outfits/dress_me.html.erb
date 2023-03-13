@@ -1,5 +1,4 @@
 <div class="container" id="dress-me-container">
-
   <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
   <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
   <h2>What look are you going for today?</h2>
@@ -10,12 +9,4 @@
       <%= form.submit "LET'S GO!", class: "btn btn-primary" %>
     <% end %>
   </div>
-
-  <div id="dress-me-space-between">
-  </div>
-
-  <h2>Add a new item</h2>
-  <%= button_to "ADD", new_item_path,
-      :class => "btn btn-secondary",
-      :method => :get %>
 </div>

@@ -11,8 +11,10 @@ a:hover {
 
 .image-box {
     box-sizing: border-box;
-    overflow: hidden;
-    padding: 30px;
+    /* overflow: hidden; */
+    padding-top: 1vh;
+    /* padding-right: 3em; */
+    padding-left: 1em;
     // object-fit: contain;
 }
 
@@ -35,9 +37,9 @@ a:hover {
     img {
         width: 150px;
         height: 150px;
+        margin-bottom: 10px;
         display: block;
         margin: 0 auto;
-        margin-bottom: 10px;
         object-position: center;
         object-fit: cover;
     }

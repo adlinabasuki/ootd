@@ -48,12 +48,22 @@
     border: 0px;
     color: black;
     text-align-last: center;
+    margin-bottom: 1em;
+    height: 2.5em;
   }
 
   .ts-control {
     border: none;
     margin-bottom: 0.2em;
     background-color: #DFDFDF;
+
+    input {
+      text-align: center;
+    }
+  }
+
+  .ts-wrapper {
+
   }
 
   .form-dropdown-half-screen {
@@ -64,7 +74,10 @@
     text-align: center;
     background-color: #DFDFDF;
     border: 0px;
+    color: black;
+    text-align-last: center;
     margin-bottom: 0.2em;
+    height: 2.5em;
   }
 
   .form-filter-div {
