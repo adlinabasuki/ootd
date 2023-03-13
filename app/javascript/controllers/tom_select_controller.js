@@ -3,6 +3,9 @@ import TomSelect from "tom-select";
 
 export default class extends Controller {
   connect() {
-    new TomSelect(this.element)
+    let settings = {
+      hidePlaceholder: true
+    }
+    const tom = new TomSelect(this.element, settings)
   }
 }

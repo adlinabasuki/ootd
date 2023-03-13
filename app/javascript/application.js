@@ -2,3 +2,6 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+import { previewImageOnFileSelect } from "./components/photo_preview"
+
+previewImageOnFileSelect();
