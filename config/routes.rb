@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   end
 
   get "dress_me", to: "outfits#dress_me"
+  get "profile", to: "pages#profile"
 end
