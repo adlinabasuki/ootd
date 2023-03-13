@@ -8,8 +8,8 @@ class Item < ApplicationRecord
   TYPE_OPTIONS = ["TOP", "BOTTOM", "SHOE"]
   LAUNDRY_OPTIONS = ["CLEAN", "DIRTY"]
 
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :type, :photo, presence: true
+  s :name, presence: true, length: { maximum: 50 }
+  validates :type, :photo, presence: truevalidate
 
   self.inheritance_column = nil
 end
