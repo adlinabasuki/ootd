@@ -147,6 +147,11 @@ item_fifteen = Item.new(name: "Shirt with spots", type: "TOP", user: julia)
 item_fifteen.photo.attach(io: file, filename: "item_fifteen.png", content_type: "image/png")
 item_fifteen.save
 
+file = URI.open("https://images.unsplash.com/photo-1603145733190-59811e523c72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80")
+item_sixteen = Item.new(name: "Julia's shoes", type: "SHOE", user: julia)
+item_sixteen.photo.attach(io: file, filename: "item_sixteen.png", content_type: "image/png")
+item_sixteen.save
+
 puts "created #{Item.count} items"
 
 # Create Items occasion
@@ -277,6 +282,11 @@ ItemsOccasion.create(
 ItemsOccasion.create(
   item_id: item_fifteen.id,
   occasion_id: casual.id
+)
+
+ItemsOccasion.create(
+  item_id: item_sixteen.id,
+  occasion_id: work.id
 )
 
 puts "created #{ItemsOccasion.count} occasion"
