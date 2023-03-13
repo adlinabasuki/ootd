@@ -23,6 +23,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 45%;
+    padding-left: 0.5em;
 }
 
 .image-card {
@@ -43,47 +44,9 @@ a:hover {
         object-position: center;
         object-fit: cover;
     }
-}
 
-// .image-cardleft {
-//     background-color: #DFDFDF;
-//     height: 200px;
-//     width: 180px;
-//     padding: 10px;
-//     border: 1px solid #1E1E1E;
-//     box-sizing: border-box;
-//     text-align: center;
-//     transform: rotate(-5deg);
-
-//     img {
-//         width: 150px;
-//         height: 150px;
-//         display: block;
-//         margin: 0 auto;
-//         margin-bottom: 10px;
-//         object-position: center;
-//         object-fit: cover;
-//         }
-// }
-
-.image-card {
-    background-color: #DFDFDF;
-    height: 200px;
-    width: 180px;
-    padding: 10px;
-    border: 1px solid #1E1E1E;
-    box-sizing: border-box;
-    text-align: center;
-    // transform: rotate(5deg);
-
-    img {
-      width: 150px;
-      height: 150px;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 10px;
-      object-position: center;
-      object-fit: cover;
+    h6 {
+      margin-top: 5px;
     }
 }
 
