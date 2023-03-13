@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html>
+<!-- <html>
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <img src="https://res.cloudinary.com/dh6e6zxmn/image/upload/v1678172304/OOTD_LOGO_tglbdi.png" alt="ootd logo">
+
   <style>
+  img {
+        justify-items: center;
+        width: 7em;
+        height: 5em;
+        display: block;
+        margin: 0 auto;
+        padding-top: 8em;
+      }
+
+  .btn-secondary {
+    color: #1E1E1E;
+    border: 2.5px solid #1E1E1E;
+    border-radius: 50px;
+    font-weight: bold;
+    background: #DFDFDF;
+    transition: background 0.3s ease;
+    margin: 0.5em;
+    padding: 8px;
+}
+  
   .rails-default-error-page {
-    background-color: #EFEFEF;
+    background-color: #FFFFFF;
     color: #2E2F30;
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: inter, sans-serif;
     margin: 0;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 
   .rails-default-error-page div.dialog {
@@ -56,12 +80,113 @@
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
+  <!-- <div class="dialog">
     <div>
       <h1>The page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
+  </div>
+  <br>
+  <div class="container">
+    <div class="btn-secondary">
+      <a href="/">Go home</a>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+
+<html>
+<head>
+  <title>The page you were looking for doesn't exist (404)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <img src="https://res.cloudinary.com/dh6e6zxmn/image/upload/v1678172304/OOTD_LOGO_tglbdi.png" alt="ootd logo">
+
+  <style>
+  img {
+        justify-items: center;
+        width: 7em;
+        height: 5em;
+        display: block;
+        margin: 0 auto;
+        padding: 4em;
+        padding-top: 7em;
+      }
+
+  .btn-secondary {
+    color: #1E1E1E;
+    border: 2.5px solid #1E1E1E;
+    border-radius: 50px;
+    font-family: Inter;
+    font-weight: bold;
+    background: #DFDFDF;
+    transition: background 0.3s ease;
+    padding: 10px;
+    }
+
+  .error-container {
+    border-radius: 5px;
+    height: 100vh;
+    text-align: center;
+    padding: 30px;
+    /* display: grid; */
+  }
+
+  .error-text {
+    display: flex
+    flex-direction: column;
+    border: 2px solid #1E1E1E;
+    border-radius: 30px;
+    padding: 8px;
+  }
+
+h1 {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+p {
+  font-family: Inter;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body class="error-container">
+  <!-- This file lives in public/404.html -->
+  <div class="dialog">
+    <div class="error-text">
+      <h1>404</h1>
+      <h4>The page you were looking for doesn't exist.</h4>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="btn-secondary">
+      <a href="/">HOME</a>
+    </div>
   </div>
 </body>
 </html>
