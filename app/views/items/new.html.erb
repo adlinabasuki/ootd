@@ -7,9 +7,11 @@
 
         <%= f.input :type, collection: Item::TYPE_OPTIONS, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Type", data: {controller: "tom-select"}}%>
 
-        <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select"}} %>
+        <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", multiple: true, placeholder: "Occasion", data: {controller: "tom-select"}} %>
 
-        <%= f.input :photo, as: :file, label: false, input_html: {class: "input-background"} %>
+        <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+
+        <%= image_tag "", width: 300, class: "d-none", id: "photo-preview" %>
       </div>
       <div class="form-actions" style="text-align: center;">
         <%= f.button :submit, value: 'Add', class: 'btn btn-primary' %>
