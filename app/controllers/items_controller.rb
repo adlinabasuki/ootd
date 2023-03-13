@@ -44,6 +44,16 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     all_occasions = params[:item][:items_occasions].compact_blank
     @item.user = current_user
+    if !@item.photo.attached?
+      case @item.type
+      when "TOP"
+        @item.photo.attach(io: File.open("app/assets/images/tshirt.png"), filename: "tshirt.png", content_type: "image/png")
+      when "BOTTOM"
+        @item.photo.attach(io: File.open("app/assets/images/trousers.png"), filename: "trousers.png", content_type: "image/png")
+      when "SHOE"
+        @item.photo.attach(io: File.open("app/assets/images/sneakers.png"), filename: "sneakers.png", content_type: "image/png")
+      end
+    end
     if @item.save
       all_occasions.each do |occasion|
         ItemsOccasion.create(occasion_id: Occasion.find(occasion.to_i).id, item_id: @item.id)
