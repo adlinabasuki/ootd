@@ -1,7 +1,7 @@
 # require 'cloudinary'
 
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit]
+  before_action :set_item, only: [:show, :edit, :destroy]
 
   def index
     # TODO: Add fileter so only current users outfits are picked up
@@ -69,6 +69,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    # CURRENTLY - when an item is destroyed, outfits that include that item are also destroyed (do we want this?)
+    @item.destroy
+
+    redirect_to items_path, status: :see_other
   end
 
   private
