@@ -1,1 +1,31 @@
-<h1>edit item</h1>
+<div class="container mt-4">
+  <div class="item-top-div">
+    <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="destroy-div">
+      <%= link_to item_path(@item),
+            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+        <%= image_tag "bin.png", alt: "delete", class: "type-item-icon" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="width: 100%">
+      <h1 class="container text-center">Edit Item</h1>
+      <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-3" %>
+      <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name, autofocus: true, label: false, input_html: {class: "text-center input-background"} %>
+
+          <%= f.input :type, collection: Item::TYPE_OPTIONS, autofocus: true, label: false, input_html: {class: "text-center input-background"}%>
+
+          <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", multiple: true, data: {controller: "tom-select"}} %>
+
+          <%= f.input :photo, as: :file, label: false, input_html: {class: "input-background"} %>
+        </div>
+        <div class="form-actions" style="text-align: center;">
+          <%= f.button :submit, value: 'Update', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
