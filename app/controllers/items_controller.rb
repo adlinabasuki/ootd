@@ -73,6 +73,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @occasions = Occasion.all
   end
 
   def update
