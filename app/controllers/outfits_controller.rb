@@ -1,9 +1,10 @@
 class OutfitsController < ApplicationController
   def new
-    # TODO: filter on users
     # find the occasion instance (based on the user input)
     @occasion_name = params[:occasion]
     selected_occasion = Occasion.find_by(name: @occasion_name)
+
+
     # randomize outfit based on occasion
 
     # filter through collection of all items with matching occasion
@@ -46,6 +47,28 @@ class OutfitsController < ApplicationController
     @occasions.each do |occasion|
       @occasions_name << occasion.name
     end
+  end
+
+  private
+
+  # Method to generate a new outfit (not save), return a hash {top: @top, bottom: @bottom, shoe: @shoe}
+  def generate_new_outfit(items)
+    outfit_hash = {}
+    @tops = items.where(type: "TOP")
+    # select one top-occasion randomly
+    @top = @tops.sample
+    # filter through collection of all bottoms with matching occasion
+    @bottoms = items.where(type: "BOTTOM")
+    # select one bottom-occasion randomly
+    @bottom = @bottoms.sample
+    # filter through collection of all shoes with matching occasion
+    @shoes = items.where(type: "SHOE")
+    # select one shoe-occasion randomly
+    @shoe = @shoes.sample
+    outfit_hash[top] = @top
+    outfit_hash[bottom] = @bottom
+    outfit_hash[shoe] = @shoe
+    return outfit_hash
   end
 
 end
