@@ -1,5 +1,9 @@
+<div class="item-top-div">
+  <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+</div>
+
 <%# <h2 class="text-center">Edit <%= resource_name.to_s.humanize</h2> %>
-<h2 class="text-center" style="padding-top: 5em">Edit your profile</h2>
+<h2 class="text-center" style="padding-top: 3.5em">Edit your profile</h2>
 <br>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
