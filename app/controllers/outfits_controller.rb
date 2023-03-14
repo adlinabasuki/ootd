@@ -48,4 +48,23 @@ class OutfitsController < ApplicationController
     end
   end
 
+  def index
+    @outfits = Outfit.all
+  end
+
+  def create
+    @outfit = Outfit.new(outfit_params)
+
+    if @outfit.save
+      redirect_to @outfit
+    else
+      render :new
+    end
+  end
+
+private
+
+  def outfit_params
+    params.require(:outfit).permit(:name, item_ids: [])
+  end
 end

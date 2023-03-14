@@ -3,29 +3,29 @@
   flex-direction: column;
   align-items: center;
   // margin-top: 2vh;
+}
 
-  .image-card-new-outfit {
-    height: 160px;
-    width: 145px;
-    padding: 8px;
-    background-color: #DFDFDF;
-    border: 1px solid #1E1E1E;
-    box-sizing: border-box;
-    text-align: center;
+.image-card-new-outfit {
+  height: 160px;
+  width: 145px;
+  padding: 8px;
+  background-color: #DFDFDF;
+  border: 1px solid #1E1E1E;
+  box-sizing: border-box;
+  text-align: center;
 
-    img {
-      width: 124px;
-      height: 124px;
-      margin-bottom: 5px;
-      display: block;
-      margin: 0 auto;
-      object-position: center;
-      object-fit: cover;
-    }
+  img {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 5px;
+    display: block;
+    margin: 0 auto;
+    object-position: center;
+    object-fit: cover;
+  }
 
-    h6 {
-      margin-top: 5px;
-    }
+  h6 {
+    margin-top: 5px;
   }
 }
 
