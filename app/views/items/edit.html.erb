@@ -8,19 +8,19 @@
       <% end %>
     </div>
   </div>
-  <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div class="container" style="display: flex; justify-content: center; align-items: center; height: 90vh;">
     <div style="width: 100%">
       <h1 class="container text-center">Edit Item</h1>
-      <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-3 mb-3" %>
+      <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-edit-img mt-3 mb-3" %>
       <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
         <div class="form-inputs">
           <%= f.input :name, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Name"} %>
 
           <%= f.input :type, collection: Item::TYPE_OPTIONS, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Type", data: {controller: "tom-select"}}%>
 
-          <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select"}} %>
+          <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select"}, items: @item.items_occasions} %>
 
-          <%= f.input :photo, as: :file, label: false, input_html: {class: "input-background"} %>
+          <%= f.input :photo, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
         </div>
       <div class="form-actions" style="text-align: center;">
         <%= f.button :submit, value: 'UPDATE', class: 'btn btn-primary' %>
