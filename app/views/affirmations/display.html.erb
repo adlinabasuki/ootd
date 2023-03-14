@@ -2,31 +2,34 @@
   <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
 </div>
 <div class="centered-content">
-    <div class="outfit-container">
-        <div class="image-box">
-            <% count = 1 %>
-            <% @outfit.items.each do |item|%>
-                <% if count.odd? %>
-                    <div class="image-card tilted-left">
-                        <%= cl_image_tag item.photo.key %>
-                        <h6><b><%= item.name %></b></h6>
-                    </div>
-                <% else %>
-                    <div class="image-card tilted-right">
-                        <%= cl_image_tag item.photo.key %>
-                        <h6><b><%= item.name %></b></h6>
-                    </div>
-                <% end %>
-                <% count += 1 %>
-            <% end %>
-        </div>
-
-        <div class="affirmation-texts">
-          <div class="text-box text-center">
-            <br>
-            <h1 id="dynamicH1">You're a style ✨icon✨</h1>
-            <br>
-            <h2 id="dynamicH2"><%= @affirmation %></h2>
+  <div class="outfit-container">
+    <div class="image-box">
+      <% count = 1 %>
+      <% @outfit.items.each do |item|%>
+        <% if count.odd? %>
+          <div class="image-card tilted-left">
+            <%= cl_image_tag item.photo.key %>
+            <h6><b><%= item.name %></b></h6>
           </div>
-        </div>
+        <% else %>
+          <div class="image-card tilted-right">
+            <%= cl_image_tag item.photo.key %>
+            <h6><b><%= item.name %></b></h6>
+          </div>
+        <% end %>
+        <% count += 1 %>
+      <% end %>
+    </div>
+
+    <div class="affirmation-texts">
+      <div class="text-box text-center">
+        <br>
+        <h1 id="dynamicH1">You're a style ✨icon✨</h1>
+        <br>
+        <h2 id="dynamicH2"><%= @affirmation %></h2>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-space">
+  </div>
 </div>
