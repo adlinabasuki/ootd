@@ -1,0 +1,25 @@
+<div class="item-top-div">
+  <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+</div>
+<div class="container" id="profile-container">
+  <div class= "profile-div">
+    <h1><%= @user.first_name%> <%= @user.last_name%></h1>
+    <h6><%= @user.email %></h6>
+    <div id="item-count-div">
+      <div class="count-div">
+        <h6><strong><%= @items_number %></strong></h6>
+        <h6>items</h6>
+      </div>
+      <div class="count-div">
+        <h6><strong><%= @outfits_number %></strong></h6>
+        <h6>outfits</h6>
+      </div>
+    </div>
+    <div style="text-align: center;">
+    <%= link_to "EDIT PROFILE", edit_user_registration_path(@user), class:"btn btn-primary mt-5" %>
+    </div>
+    <div class="text-center" style="padding-top: 10em;">
+      <%= link_to "LOGOUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+    </div>
+  </div>
+</div>

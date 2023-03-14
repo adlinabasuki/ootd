@@ -10,5 +10,7 @@ class AffirmationsController < ApplicationController
 
     @affirmation = phrases.sample
     @outfit = Outfit.find(params[:id])
+    @outfit.status = "accepted"
+    @outfit.save
   end
 end

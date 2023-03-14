@@ -1,4 +1,4 @@
-<div class="item-top-div mt-3">
+<div class="item-top-div">
   <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
 </div>
 <div class="container" id="new-outfit-container">
@@ -12,7 +12,7 @@
       <h6 class="mt-5">Or update your <%= link_to "wardrobe", items_path, class: "underlined-link"%></h6>
     </div>
   <% else %>
-    <h1 style="margin-bottom: 1em;">Here is your outfit!</h1>
+    <h1 style="margin-bottom: 0.5em;">Here is your outfit!</h1>
     <div class="image-card-new-outfit tilted-left">
       <%= cl_image_tag @top.photo.key %>
       <h6><%= @top.name %></h6>
@@ -25,7 +25,7 @@
       <%= cl_image_tag @shoe.photo.key %>
       <h6><%= @shoe.name %></h6>
     </div>
-    <div class="button-container-div">
+    <div class="button-container-div" style="margin-top: 0.5em;">
       <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
       <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
     </div>

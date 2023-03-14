@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def profile
+    @user = current_user
+    @items_number = Item.where(user: current_user).count
+    @outfits_number = Outfit.where(user: current_user).count
+  end
 end
