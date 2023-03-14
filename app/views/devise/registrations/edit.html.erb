@@ -3,7 +3,7 @@
 </div>
 
 <%# <h2 class="text-center">Edit <%= resource_name.to_s.humanize</h2> %>
-<h2 class="text-center" style="padding-top: 0.5em">Edit your profile</h2>
+<h2 class="text-center" style="padding-top: 1em; padding-bottom: 0.5em">Edit your profile</h2>
 <br>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>

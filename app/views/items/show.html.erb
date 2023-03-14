@@ -13,7 +13,7 @@
   </div>
   <div class="item-show-div mt-5">
     <h1><%= @item.name %></h1>
-    <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-5" %>
+    <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-3" %>
     <div class="item-show-info mt-3">
       <div class="item-occasions">
         <% @occasions_name.each do |occasion| %>
