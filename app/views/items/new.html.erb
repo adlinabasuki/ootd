@@ -1,9 +1,9 @@
-<div class="item-top-div mt-3">
+<div class="item-top-div">
     <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
 </div>
-<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div class="container" style="display: flex; justify-content: center; align-items: center; padding-top: 5em;">
   <div style="width: 100%">
-    <h1 class="container text-center mb-5">Add new item</h1>
+    <h1 class="container text-center mt-3 mb-5">Add new item</h1>
     <%= simple_form_for(@item, html: { class: "container" }) do |f| %>
       <div class="form-inputs">
         <%= f.input :name, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Name"} %>
@@ -16,8 +16,8 @@
 
         <%= image_tag "", width: 300, class: "d-none", id: "photo-preview" %>
       </div>
-      <div class="form-actions" style="text-align: center;">
-        <%= f.button :submit, value: 'ADD', class: 'btn btn-primary' %>
+      <div class="form-actions" style="text-align: center; justify-content: center;">
+        <%= f.button :submit, value: 'ADD', class: 'btn-primary' %>
       </div>
     <% end %>
   </div>
