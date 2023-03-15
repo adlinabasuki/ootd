@@ -291,10 +291,9 @@ ItemsOccasion.create(
 
 puts "created #{ItemsOccasion.count} Items occasion"
 
-# Create Items occasion
-puts "creating items occasions"
+# Creating ItemsWeather (for Stefany's Items)
+puts "creating ItemsWeather"
 
-# ItemsWeather for Stefany
 ItemsWeather.create(
   item_id: item_one.id,
   name: "rainy and cold"
@@ -524,3 +523,4 @@ ItemsWeather.create(
   item_id: item_thirteen.id,
   name: "dry and hot"
 )
+puts "created #{ItemsWeather.count} ItemsWeather"
