@@ -14,6 +14,9 @@ class OutfitsController < ApplicationController
 
   def show
     @outfit = Outfit.find(params[:id])
+    @top = @outfit.items.find_by(type: "TOP")
+    @bottom = @outfit.items.find_by(type: "BOTTOM")
+    @shoe = @outfit.items.find_by(type: "SHOE")
   end
 
   def new
