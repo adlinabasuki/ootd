@@ -1,4 +1,8 @@
-<div class="container" id="dress-me-container">
+<div class="container" id="dress-me-container" data-controller="weather">
+  <p data-weather-target="desc"></p>
+  <p data-weather-target="temp"></p>
+  <p data-weather-target="city"></p>
+  <div id="dress-me-space-between"></div>
   <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
   <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
   <h2>What look are you going for today?</h2>
@@ -7,6 +11,8 @@
     <%= form_with url: "/outfits/new", method: :get do |form| %>
       <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
       <%= form.submit "LET'S GO!", class: "btn btn-primary" %>
+      <%= form.hidden_field :temperature, class: "weather-temp" %>
+      <%= form.hidden_field :description, class: "weather-descr" %>
     <% end %>
   </div>
 </div>

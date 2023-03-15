@@ -12,3 +12,6 @@ application.register("index-filter", IndexFilterController)
 
 import TomSelectController from "./tom_select_controller"
 application.register("tom-select", TomSelectController)
+
+import WeatherController from "./weather_controller"
+application.register("weather", WeatherController)

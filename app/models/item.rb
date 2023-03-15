@@ -4,6 +4,7 @@ class Item < ApplicationRecord
   has_many :items_occasions, dependent: :destroy
   has_many :occasions, through: :items_occasions
   has_one_attached :photo
+  has_many :items_weathers
 
   TYPE_OPTIONS = ["TOP", "BOTTOM", "SHOE"]
   LAUNDRY_OPTIONS = ["CLEAN", "DIRTY"]
