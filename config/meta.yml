@@ -1,0 +1,5 @@
+meta_product_name: "OÖTD"
+meta_title: "LOOK GOOD FEEL GOOD - Start Your Day Right With OÖTD"
+meta_description: "Relevant description"
+meta_image: "ootd_logo.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards

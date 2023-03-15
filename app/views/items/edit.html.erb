@@ -18,7 +18,7 @@
 
           <%= f.input :type, collection: Item::TYPE_OPTIONS, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Type", data: {controller: "tom-select"}}%>
 
-          <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select"}, items: @item.items_occasions} %>
+          <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select", tom_select_options_value: {items: @item.occasions.pluck(:id)}}} %>
 
           <%= f.input :photo, input_html: {class: 'd-none', id: 'photo-input'}, label_html: {class: 'upload-photo'}, label: '📷 Upload a photo' %>
         </div>
