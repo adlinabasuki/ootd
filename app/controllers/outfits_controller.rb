@@ -4,23 +4,52 @@ class OutfitsController < ApplicationController
     @occasion_name = params[:occasion]
     selected_occasion = Occasion.find_by(name: @occasion_name)
 
+    weather_descriptions_dry = ["Clear", "Clouds"]
+    weather_descriptions_rainy = ["Thunderstorm", "Drizzle", "Rain", "Snow", "Atmosphere"]
+
+    description = params[:description]
+    condition = weather_descriptions_rainy.include?(description) ? "rainy" : "dry"
+
+    temperature =  params[:temperature].to_i
+    if temperature < 11
+      temp = "cold"
+    elsif temperature >= 11 && temperature < 25
+      temp = "medium warm"
+    elsif temperature >= 25
+      temp = "hot"
+    end
 
     # randomize outfit based on occasion
 
     # filter through collection of all items with matching occasion
     @items = Item.joins(:items_occasions).where(items_occasions: { occasion: selected_occasion }).where(user: current_user)
+
+    @weather_items = @items.joins(:items_weathers).where(items_weathers: {name: "#{condition} and #{temp}"})
     # filter through collection of all tops with matching occasion
+
     @tops = @items.where(type: "TOP")
-    # select one top-occasion randomly
-    @top = @tops.sample
+    # select one top-occasion randomly unless there is a bottom with the weather condition of today
+    if @weather_items.where(type: "TOP").any?
+      @top = @weather_items.where(type: "TOP").sample
+    else
+      @top = @tops.sample
+    end
     # filter through collection of all bottoms with matching occasion
     @bottoms = @items.where(type: "BOTTOM")
-    # select one bottom-occasion randomly
-    @bottom = @bottoms.sample
+    # select one bottom-occasion randomly unless there is a bottom with the weather condition of today
+    if @weather_items.where(type: "BOTTOM").any?
+      @bottom = @weather_items.where(type: "BOTTOM").sample
+    else
+      @bottom = @bottoms.sample
+    end
     # filter through collection of all shoes with matching occasion
     @shoes = @items.where(type: "SHOE")
-    # select one shoe-occasion randomly
-    @shoe = @shoes.sample
+    # select one shoe-occasion randomly unless there is a bottom with the weather condition of today
+    if @weather_items.where(type: "SHOE").any?
+      @shoe = @weather_items.where(type: "SHOE").sample
+    else
+      @shoe = @shoes.sample
+    end
 
     # Creating an outfit
     unless @top.nil? || @bottom.nil? || @shoe.nil?
