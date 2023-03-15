@@ -7,6 +7,10 @@ class OutfitsController < ApplicationController
       @occasions_name << occasion.name
     end
   end
+  
+  def index
+    @outfits = Outfit.all
+  end
 
   def new
     # find the occasion instance (based on the user input)
@@ -132,6 +136,7 @@ class OutfitsController < ApplicationController
     return nil
   end
 
+
   # Creating an instance of an outfit in DB, input is a hash with 3 items
   def create_outfit(outfit_hash)
     outfit = Outfit.create(user: current_user)
@@ -152,5 +157,6 @@ class OutfitsController < ApplicationController
       outfit_id: outfit.id
     )
     return outfit
+
   end
 end

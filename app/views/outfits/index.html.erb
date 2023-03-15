@@ -1,0 +1,14 @@
+<h1>All Outfits</h1>
+
+<div class="grid">
+  <% @outfits.each do |outfit| %>
+    <div class="outfit">
+      <% outfit.items.shuffle.each_with_index do |item, index| %>
+        <div class="stacking image-card-new-outfit <%= index.even? ? "tilted-left" : "tilted-right" %>">
+          <%= cl_image_tag item.photo.key %>
+          <h6><%= item.name %></h6>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
