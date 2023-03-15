@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_022920) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_14_084311) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,6 +66,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_022920) do
     t.index ["occasion_id"], name: "index_items_occasions_on_occasion_id"
   end
 
+  create_table "items_weathers", force: :cascade do |t|
+    t.string "name"
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_items_weathers_on_item_id"
+  end
+
   create_table "occasions", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id"
@@ -110,6 +118,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_022920) do
   add_foreign_key "items", "users"
   add_foreign_key "items_occasions", "items"
   add_foreign_key "items_occasions", "occasions"
+  add_foreign_key "items_weathers", "items"
   add_foreign_key "occasions", "users"
   add_foreign_key "outfits", "users"
   add_foreign_key "outfits_items", "items"

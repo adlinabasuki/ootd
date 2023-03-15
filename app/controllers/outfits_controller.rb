@@ -9,7 +9,7 @@ class OutfitsController < ApplicationController
   end
 
   def index
-    @outfits = Outfit.all
+    @outfits = Outfit.all.where(status: "accepted")
   end
 
   def show
