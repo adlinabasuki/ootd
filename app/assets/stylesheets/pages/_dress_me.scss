@@ -7,3 +7,21 @@
 #dress-me-space-between {
   height: 13vh;
 }
+
+#dress-me-small-space {
+  height: 1.5vh;
+}
+
+.weather-temp-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 88px;
+  padding-right: 88px;
+
+  img {
+    height: 65px;
+    width: 65px;
+  }
+}

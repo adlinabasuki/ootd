@@ -1,11 +1,23 @@
 <div class="container" id="dress-me-container" data-controller="weather">
-  <p data-weather-target="desc"></p>
-  <p data-weather-target="temp"></p>
-  <p data-weather-target="city"></p>
-  <div id="dress-me-space-between"></div>
-  <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
-  <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
-  <h2>What look are you going for today?</h2>
+  <%# <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
+    <div id="dress-me-space-between">
+    </div>
+
+    <div class="weather-temp-div">
+      <img src="" alt="weather icon" id="weather-icon">
+      <h4 data-weather-target="temp"></h4>
+    </div>
+      <h6 data-weather-target="city"></h6>
+
+    <div id="dress-me-small-space">
+    </div>
+
+    <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
+    <h2>What look are you going for today?</h2>
+    
+    <div id="dress-me-small-space">
+    </div>
+
 
   <div class="occasion-selector mt-5">
     <%= form_with url: "/outfits/new", method: :get do |form| %>
