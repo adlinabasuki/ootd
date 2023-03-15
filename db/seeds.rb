@@ -9,6 +9,11 @@
 require "open-uri"
 
 # --------------------------------DESTROYING -------------------------
+# Destroying all ItemsWeather
+puts "destroying all ItemsWeather"
+ItemsWeather.destroy_all
+puts "all ItemsWeather destroyed"
+
 # Destroying all OutfitsItems
 puts "destroying all OutfitsItems"
 OutfitsItem.destroy_all
@@ -169,6 +174,11 @@ ItemsOccasion.create(
 )
 
 ItemsOccasion.create(
+  item_id: item_three.id,
+  occasion_id: work.id
+)
+
+ItemsOccasion.create(
   item_id: item_four.id,
   occasion_id: night.id
 )
@@ -280,3 +290,237 @@ ItemsOccasion.create(
 )
 
 puts "created #{ItemsOccasion.count} Items occasion"
+
+# Create Items occasion
+puts "creating items occasions"
+
+# ItemsWeather for Stefany
+ItemsWeather.create(
+  item_id: item_one.id,
+  name: "rainy and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_one.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_two.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_two.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_three.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_three.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_three.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_three.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_three.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_four.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_four.id,
+  name: "rainy and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_four.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_five.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_five.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_five.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_six.id,
+  name: "rainy and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_seven.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_seven.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_seven.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_seven.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_eight.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_eight.id,
+  name: "rainy and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_eight.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_nine.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_nine.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_ten.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_ten.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_ten.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_ten.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "dry and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "rainy and cold"
+)
+
+ItemsWeather.create(
+  item_id: item_eleven.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_twelve.id,
+  name: "dry and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_twelve.id,
+  name: "dry and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_twelve.id,
+  name: "rainy and hot"
+)
+
+ItemsWeather.create(
+  item_id: item_twelve.id,
+  name: "rainy and medium warm"
+)
+
+ItemsWeather.create(
+  item_id: item_thirteen.id,
+  name: "dry and hot"
+)
