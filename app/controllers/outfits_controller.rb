@@ -9,7 +9,7 @@ class OutfitsController < ApplicationController
   end
 
   def index
-    @outfits = Outfit.all.where(status: "accepted")
+    @outfits = Outfit.all.where(status: "accepted").where(user: current_user)
   end
 
   def show
