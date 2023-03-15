@@ -4,13 +4,17 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["temp", "city"]
 
+  static values = {
+    apiKey: String
+  }
+
   connect() {
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
       const weatherField = document.querySelector(".weather-temp")
       const iconField = document.getElementById("weather-icon")
       const descriptionField = document.querySelector(".weather-descr")
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=3383dc5d38c97be1b56c31e88567f2e7`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${this.apiKeyValue}`;
       fetch(url)
         .then(response => response.json())
         .then((data) => {
