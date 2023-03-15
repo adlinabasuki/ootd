@@ -1,13 +1,13 @@
-<div class="container mt-4">
-  <div class="item-top-div">
-    <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
-    <div class="destroy-div">
-      <%= link_to item_path(@item),
-            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
-        <%= image_tag "bin.png", alt: "delete", class: "type-item-icon" %>
-      <% end %>
-    </div>
+<div class="item-top-div">
+  <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+  <div class="destroy-div">
+    <%= link_to item_path(@item),
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+          <%= image_tag "bin.png", alt: "delete", class: "type-item-icon" %>
+        <% end %>
   </div>
+</div>
+<div class="container mt-4">
   <div class="container" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
     <div style="width: 100%">
       <h1 class="container text-center">Edit Item</h1>
