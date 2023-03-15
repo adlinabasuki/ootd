@@ -15,7 +15,9 @@
         <h6>outfits</h6>
       </div>
     </div>
+    <div style="text-align: center;">
     <%= link_to "EDIT PROFILE", edit_user_registration_path(@user), class:"btn btn-primary mt-5" %>
+    </div>
     <div class="text-center" style="padding-top: 10em;">
       <%= link_to "LOGOUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
     </div>

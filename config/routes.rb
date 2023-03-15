@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :items
-  resources :outfits, only: [:new] do
+  resources :outfits, only: [:new, :index, :show] do
     member do
       get "affirmations/display", to: "affirmations#display"
     end
