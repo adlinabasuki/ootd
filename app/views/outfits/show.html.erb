@@ -1,22 +1,25 @@
 <div class="item-top-div">
   <a href="javascript:window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
 </div>
+
 <div class="centered-content">
   <div class="outfit-container">
     <div class="image-box">
-      <% count = 1 %>
-      <% @outfit.items.each do |item|%>
-        <% if count.odd? %>
-          <div class="image-card tilted-left">
-            <%= cl_image_tag item.photo.key %>
-            <h6><b><%= item.name %></b></h6>
-          </div>
-        <% else %>
-          <div class="image-card tilted-right">
-            <%= cl_image_tag item.photo.key %>
-            <h6><b><%= item.name %></b></h6>
-          </div>
-        <% end %>
-        <% count += 1 %>
-      <% end %>
+
+      <div class="image-card tilted-left">
+        <%= cl_image_tag @top.photo.key %>
+        <h6><b><%= @top.name %></b></h6>
+      </div>
+
+      <div class="image-card tilted-right">
+        <%= cl_image_tag @bottom.photo.key %>
+        <h6><b><%= @bottom.name %></b></h6>
+      </div>
+
+      <div class="image-card tilted-left">
+        <%= cl_image_tag @shoe.photo.key %>
+        <h6><b><%= @shoe.name %></b></h6>
+      </div>
     </div>
+  </div>
+</div>
