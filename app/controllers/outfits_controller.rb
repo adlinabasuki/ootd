@@ -7,9 +7,13 @@ class OutfitsController < ApplicationController
       @occasions_name << occasion.name
     end
   end
-  
+
   def index
     @outfits = Outfit.all
+  end
+
+  def show
+    @outfit = Outfit.find(params[:id])
   end
 
   def new
