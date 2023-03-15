@@ -1,4 +1,4 @@
-<div class="container" id="dress-me-container" data-controller="weather">
+<div class="container" id="dress-me-container" data-controller="weather" data-weather-api-key-value="<%= ENV['APPID'] %>">
   <%# <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
     <div id="dress-me-space-between">
     </div>
@@ -14,7 +14,7 @@
 
     <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
     <h2>What look are you going for today?</h2>
-    
+
     <div id="dress-me-small-space">
     </div>
 
