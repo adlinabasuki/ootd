@@ -43,6 +43,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     all_occasions = params[:item][:items_occasions].compact_blank
+    weather_occasions = params[:item][:items_weathers].compact_blank
     @item.user = current_user
     if !@item.photo.attached?
       case @item.type
@@ -57,6 +58,9 @@ class ItemsController < ApplicationController
     if @item.save
       all_occasions.each do |occasion|
         ItemsOccasion.create(occasion_id: Occasion.find(occasion.to_i).id, item_id: @item.id)
+      end
+      weather_occasions.each do |weather_occasion|
+        ItemsWeather.create(name: weather_occasion, item_id: @item.id)
       end
       redirect_to items_path
     else
