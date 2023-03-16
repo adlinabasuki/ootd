@@ -1,3 +1,105 @@
+// @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+// @import url(https://fonts.googleapis.com/css?family=Inter);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+$border-radius: 20px;
+
+.widget {
+  position: absolute;
+  top: 16.5vh;
+  left: 50%;
+  display: flex;
+  // height: 300px;
+  // width: 600px;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  cursor: pointer;
+  border-radius: $border-radius;
+  box-shadow: 0 3px 10px 0 #00000033, 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  
+  .weatherIcon{
+    flex: 1 100%;
+    height: 60%;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background: #FAFAFA;
+    font-family: weathericons;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 70px;
+    
+    i{
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+  }
+  
+  .weatherInfo{
+    background: $black;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 17em;
+    height: 4em;
+    padding: 12px;
+    
+    .temperature{
+      flex: 0 0 40%;
+      width: 100%;
+      font-size: 30px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .description{
+      flex: 0 60%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      
+      .weatherCondition{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      
+      .place{
+        font-size: 12px;
+      }
+    }
+  }
+  
+  .date{
+    flex: 0 0 30%;
+    height: 40%;
+    background: #70C1B3;
+    border-bottom-right-radius: $border-radius;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+  }
+}
+
+p{
+  position: fixed;
+  bottom: 0%;
+  right: 2%;
+  a{
+    text-decoration: none;
+    color: #E4D6A7;
+    font-size: 10px;
+  }
+}
+
+
 #dress-me-container {
   text-align: center;
   margin-top: 5vh;
@@ -5,7 +107,7 @@
 }
 
 #dress-me-space-between {
-  height: 13vh;
+  height: 30vh;
 }
 
 #dress-me-small-space {
@@ -17,11 +119,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left: 88px;
-  padding-right: 88px;
+  padding-left: 80px;
+  padding-right: 91px;
 
   img {
     height: 65px;
     width: 65px;
   }
+}
+
+.location-text {
+  text-transform: uppercase;
 }

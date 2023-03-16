@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="weather"
 export default class extends Controller {
-  static targets = ["temp", "city", "icon", "weatherField", "descriptionField"]
+  static targets = ["temp", "city", "icon", "desc"]
 
   static values = {
     apiKey: String
@@ -25,14 +25,39 @@ export default class extends Controller {
   }
 
   async #fetchWeather(lat, lng) {
-    console.log("fetching", lat, lng);
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${this.apiKeyValue}`;
     const weatherData = await (await fetch(url)).json()
-    const iconId = weatherData.weather[0].icon;
-    this.iconTarget.src = `https://openweathermap.org/img/w/${iconId}.png`;
-    this.descriptionFieldTarget.value = weatherData.weather[0].main;
-    this.tempTarget.textContent = weatherData.main.temp;
-    this.weatherFieldTarget.value = weatherData.main.temp;
-    this.cityTarget.textContent = weatherData.name;
+    console.log("fetching", lat, lng);
+    console.log("data")
+    const desc = weatherData.weather[0].main
+    console.log("weatherData", weatherData)
+    this.tempTarget.innerText = `${Math.round(weatherData.main.temp)}°`;
+    this.descTarget.innerText = desc;
+    this.cityTarget.innerText = weatherData.name;
+    console.log(desc);
+    if(desc === 'Clouds') {
+      this.iconTarget.classList.add('wi-cloudy');
+    }
+    else if (desc === "Sunny") {
+      this.iconTarget.classList.add('wi-day-sunny');
+    }
+    else if (desc === "Clear") {
+      this.iconTarget.classList.add('wi-day-sunny');
+    }
+    else if (desc === "Thunderstorm") {
+      this.iconTarget.classList.add('wi-thunderstorm');
+    }
+    else if (desc === "Drizzle") {
+      this.iconTarget.classList.add('wi-day-sunny');
+    }
+    else if (desc === "Rain") {
+      this.iconTarget.classList.add('wi-rain');
+    }
+    else if (desc === "Snow") {
+      this.iconTarget.classList.add('wi-snow');
+    }
+    else if (desc === "Atmosphere") {
+      this.iconTarget.classList.add('wi-day-sunny');
+    }
   }
 }

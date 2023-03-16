@@ -5,7 +5,7 @@
 }
 
 .full .ts-control {
-  background-color: #DFDFDF;
+  background-color: $ootd-gray;
 }
 
 .ts-control {
@@ -13,12 +13,12 @@
 }
 
 .form-control.is-valid {
-  border-color: #DFDFDF;
+  border-color: $ootd-gray;
   background-image: none;
 }
 
 .form-select.is-valid {
-  border-color: #DFDFDF;
+  border-color: $ootd-gray;
 }
 
 .form-select.is-valid:not([multiple]):not([size]) {

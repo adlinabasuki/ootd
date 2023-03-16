@@ -15,17 +15,32 @@
     <h1><%= @item.name %></h1>
     <%= cl_image_tag @item.photo.key, alt: @item.name, class: "item-show-img mt-3" %>
     <div class="item-show-info mt-3">
-      <div class="item-occasions">
-        <% @occasions_name.each do |occasion| %>
-          <h6><%= occasion %></h6>
-        <% end %>
+      <div class="show-list-div">
+        <div class="item-show-attributes">
+          <h6 class="underlined-link">Occasions</h6>
+          <% @occasions_name.each do |occasion| %>
+            <h6><%= occasion %></h6>
+          <% end %>
+          <% if @occasions_name == [] %>
+            <h6>NO OCCASIONS</h6>
+          <% end %>
+        </div>
+        <div class="item-show-attributes">
+          <h6 class="underlined-link">Weathers</h6>
+          <% @weather_items.each do |weather| %>
+            <h6><%= weather.name %></h6>
+          <% end %>
+          <% if @weather_items == [] %>
+            <h6>NO WEATHERS</h6>
+          <% end %>
+        </div>
       </div>
       <% if @item.type == "TOP" %>
-        <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon" %>
+        <%= image_tag "tshirt.png", alt: "t-shirt", class: "type-item-icon-show" %>
       <% elsif @item.type == "BOTTOM" %>
-        <%= image_tag "trousers.png", alt: "trousers", class: "type-item-icon" %>
+        <%= image_tag "trousers.png", alt: "trousers", class: "type-item-icon-show" %>
       <% else %>
-        <%= image_tag "sneakers.png", alt: "sneakers", class: "type-item-icon" %>
+        <%= image_tag "sneakers.png", alt: "sneakers", class: "type-item-icon-show" %>
       <% end %>
     </div>
   </div>

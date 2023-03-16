@@ -1,12 +1,12 @@
 a {
-    font-family: "Inter", Helvetica, sans-serif;
+    // font-family: "Inter", Helvetica, sans-serif;
+    font-family: $body-font;
     font-weight: 400;
-    // text-decoration: underline;
-    color: black;
+    color: $black;
 }
 
 a:hover {
-    color: black;
+    color: $black;
 }
 
 .image-box {
@@ -27,11 +27,11 @@ a:hover {
 }
 
 .image-card {
-    background-color: #DFDFDF;
+    background-color: $ootd-gray;
     height: 200px;
     width: 180px;
     padding: 10px;
-    border: 1px solid #1E1E1E;
+    border: 1px solid $black;
     box-sizing: border-box;
     text-align: center;
 
@@ -255,5 +255,11 @@ a:hover {
   .type-item-icon {
     width: 24px;
     height: 24px;
+    text-decoration: none;
+  }
+
+  .type-item-icon-show {
+    width: 35px;
+    height: 35px;
     text-decoration: none;
   }

@@ -94,6 +94,7 @@ class ItemsController < ApplicationController
     @occasions.each do |occasion|
       @occasions_name << occasion.name
     end
+    @weather_items = ItemsWeather.where(item: @item)
   end
 
   def edit

@@ -1,22 +1,28 @@
 <div class="container" id="dress-me-container" data-controller="weather" data-weather-api-key-value="<%= ENV['APPID'] %>">
   <%# <%= image_tag "ootd_logo.png", height: 70, alt: "ootd_logo" %>
+
+    <%# <div class="weather-temp-div">
+      <img src="" alt="weather icon" id="weather-icon">
+      <h3 ></h3>
+    </div>
+      <h6  class="location-text"></h6> %>
+
+    <article class="widget">
+      <div class="weatherIcon"><i class="wi" data-weather-target="icon"></i></div>
+      <div class="weatherInfo">
+        <div class="temperature"><span data-weather-target="temp"></span></div>
+        <div class="description">
+          <div class="weatherCondition" data-weather-target="desc"></div>
+          <div class="place" data-weather-target="city"></div>
+        </div>
+      </div>
+    </article>
+
     <div id="dress-me-space-between">
-    </div>
-
-    <div class="weather-temp-div">
-      <img src="" alt="weather icon" id="weather-icon", data-weather-target="icon">
-      <h4 data-weather-target="temp"></h4>
-    </div>
-      <h6 data-weather-target="city"></h6>
-
-    <div id="dress-me-small-space">
     </div>
 
     <h1 class="mt-4">Welcome, <%= @user.first_name %>!</h1>
     <h2>What look are you going for today?</h2>
-
-    <div id="dress-me-small-space">
-    </div>
 
 
   <div class="occasion-selector mt-5">

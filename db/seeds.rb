@@ -97,7 +97,7 @@ item_six.photo.attach(io: file, filename: "item_six.png", content_type: "image/p
 item_six.save
 
 file = URI.open("https://images.unsplash.com/photo-1591195853828-11db59a44f6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80")
-item_seven = Item.new(name: "Jean Shorts", type: "BOTTOM", user: stefany)
+item_seven = Item.new(name: "Jeans Shorts", type: "BOTTOM", user: stefany)
 item_seven.photo.attach(io: file, filename: "item_seven.png", content_type: "image/png")
 item_seven.save
 
