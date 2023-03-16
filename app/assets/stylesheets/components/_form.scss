@@ -12,7 +12,7 @@
     // padding: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #FFFFFF;
+    background-color: $white;
     margin: 0 auto;
     text-align: center;
   }
@@ -25,7 +25,7 @@
   }
 
   .input-background {
-    background-color: #DFDFDF;
+    background-color: $ootd-gray;
   }
 
   .form-actions {
@@ -44,7 +44,7 @@
     font-weight: 500;
     border-radius: 50px;
     text-align: center;
-    background-color: #DFDFDF;
+    background-color: $ootd-gray;
     border: 0px;
     color: black;
     text-align-last: center;
@@ -55,8 +55,7 @@
   .ts-control {
     border: none;
     margin-bottom: 0.2em;
-    // background-color: #DFDFDF;
-    background: #DFDFDF;
+    background: $ootd-gray;
 
     input {
       text-align: center;
@@ -65,7 +64,7 @@
 
   .ts-wrapper.single.input-active {
     .ts-control {
-    background-color: #DFDFDF;
+    background-color: $ootd-gray;
     }
   }
 
@@ -75,7 +74,7 @@
     font-weight: 500;
     border-radius: 50px;
     text-align: center;
-    background-color: #DFDFDF;
+    background-color: $ootd-gray;
     border: 0px;
     color: black;
     text-align-last: center;

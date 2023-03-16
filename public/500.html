@@ -75,72 +75,85 @@
   <img src="https://res.cloudinary.com/dh6e6zxmn/image/upload/v1678172304/OOTD_LOGO_tglbdi.png" alt="ootd logo">
 
   <style>
-  img {
-        justify-items: center;
-        width: 7em;
-        height: 5em;
-        display: block;
-        margin: 0 auto;
-        padding: 4em;
-        padding-top: 7em;
+    img {
+          justify-items: center;
+          width: 7em;
+          height: 5em;
+          display: block;
+          margin: 0 auto;
+          padding: 4em;
+          padding-top: 7em;
+        }
+
+    .btn-secondary {
+      color: #1E1E1E;
+      border: 2.5px solid #1E1E1E;
+      border-radius: 50px;
+      font-family: Inter;
+      font-weight: bold;
+      background: #DFDFDF;
+      transition: background 0.3s ease;
+      padding: 10px;
       }
 
-  .btn-secondary {
-    color: #1E1E1E;
-    border: 2.5px solid #1E1E1E;
-    border-radius: 50px;
-    font-family: Inter;
-    font-weight: bold;
-    background: #DFDFDF;
-    transition: background 0.3s ease;
-    padding: 10px;
+    .error-container {
+      border-radius: 5px;
+      height: 100vh;
+      text-align: center;
+      padding: 30px;
+      /* display: grid; */
     }
 
-  .error-container {
-    border-radius: 5px;
-    height: 100vh;
-    text-align: center;
-    padding: 30px;
-    /* display: grid; */
-  }
+    .error-text {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid #1E1E1E;
+      border-radius: 30px;
+      padding: 8px;
+    }
 
-  .error-text {
-    display: flex
-    flex-direction: column;
-    border: 2px solid #1E1E1E;
-    border-radius: 30px;
-    padding: 8px;
-  }
+    h1 {
+      font-family: "Inter", "Helvetica", "sans-serif";
+      font-size: 26px;
+      font-weight: 600;
+    }
 
-h1 {
-  font-family: Inter;
-  font-size: 40px;
-  font-weight: 800;
-}
+    h2 {
+      font-family: "Inter", "Helvetica", "sans-serif";
+      font-size: 20px;
+      font-weight: 600;
+    }
 
-h2 {
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 600;
-}
+    h3 {
+      font-family: "Inter", "Helvetica", "sans-serif";
+      font-size: 16px;
+      font-weight: 500;
+    }
 
-h6 {
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-}
+    h6 {
+      font-family: "Inter", "Helvetica", "sans-serif";
+      font-size: 14px;
+      font-weight: 400;
+    }
 
-body {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 300;
-}
+    body {
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 300;
+    }
 
-p {
-  font-family: Inter;
-  font-size: 13px;
-}
-</style>
+    p {
+      font-family: Inter;
+      font-size: 13px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: "Inter", "Helvetica", "sans-serif";;
+      font-weight: 600;
+    }
+  </style>
 </head>
 
 <body class="error-container">
@@ -148,7 +161,7 @@ p {
   <div class="dialog">
     <div class="error-text">
       <h1>500</h1>
-      <h4>We're sorry, but something went wrong.</h4>
+      <h3>We're sorry, but something went wrong.</h3>
     </div>
   </div>
   <br>
@@ -159,3 +172,4 @@ p {
   </div>
 </body>
 </html>
+
