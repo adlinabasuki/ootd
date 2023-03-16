@@ -4,7 +4,7 @@
     </div>
 
     <div class="weather-temp-div">
-      <img src="" alt="weather icon" id="weather-icon">
+      <img src="" alt="weather icon" id="weather-icon", data-weather-target="icon">
       <h4 data-weather-target="temp"></h4>
     </div>
       <h6 data-weather-target="city"></h6>
@@ -23,8 +23,14 @@
     <%= form_with url: "/outfits/new", method: :get do |form| %>
       <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
       <%= form.submit "LET'S GO!", class: "btn btn-primary" %>
-      <%= form.hidden_field :temperature, class: "weather-temp" %>
-      <%= form.hidden_field :description, class: "weather-descr" %>
+      <%= form.hidden_field :temperature,
+            class: "weather-temp",
+            data: { weather_target: "weatherField" }
+      %>
+      <%= form.hidden_field :description,
+            class: "weather-descr",
+            data: { weather_target: "descriptionField"}
+      %>
     <% end %>
   </div>
 </div>

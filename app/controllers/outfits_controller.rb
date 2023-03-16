@@ -69,9 +69,11 @@ class OutfitsController < ApplicationController
     weather_descriptions_rainy = ["Thunderstorm", "Drizzle", "Rain", "Snow", "Atmosphere"]
 
     description = params[:description]
+    description = "Clouds" if description.nil?
     condition = weather_descriptions_rainy.include?(description) ? "rainy" : "dry"
 
-    temperature =  params[:temperature].to_i
+    temperature = params[:temperature].to_i
+    temperature = 22 if temperature.nil?
     if temperature < 11
       temp = "cold"
     elsif temperature >= 11 && temperature < 25
