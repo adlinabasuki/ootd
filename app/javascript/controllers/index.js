@@ -10,6 +10,9 @@ application.register("hello", HelloController)
 import IndexFilterController from "./index_filter_controller"
 application.register("index-filter", IndexFilterController)
 
+import LoadingPageController from "./loading_page_controller"
+application.register("loading-page", LoadingPageController)
+
 import TomSelectController from "./tom_select_controller"
 application.register("tom-select", TomSelectController)
 

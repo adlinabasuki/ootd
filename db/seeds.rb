@@ -296,221 +296,221 @@ puts "creating ItemsWeather"
 
 ItemsWeather.create(
   item_id: item_one.id,
-  name: "rainy and cold"
+  name: "RAINY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_one.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_two.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_two.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_three.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_three.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_three.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_three.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_three.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_four.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_four.id,
-  name: "rainy and cold"
+  name: "RAINY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_four.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_five.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_five.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_five.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_six.id,
-  name: "rainy and cold"
+  name: "RAINY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_seven.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_seven.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_seven.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_seven.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_eight.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_eight.id,
-  name: "rainy and cold"
+  name: "RAINY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_eight.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_nine.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_nine.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_ten.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_ten.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_ten.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "dry and cold"
+  name: "DRY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_eleven.id,
-  name: "rainy and cold"
+  name: "RAINY AND COLD"
 )
 
 ItemsWeather.create(
   item_id: item_twelve.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_twelve.id,
-  name: "dry and medium warm"
+  name: "DRY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_twelve.id,
-  name: "rainy and hot"
+  name: "RAINY AND HOT"
 )
 
 ItemsWeather.create(
   item_id: item_twelve.id,
-  name: "rainy and medium warm"
+  name: "RAINY AND MEDIUM WARM"
 )
 
 ItemsWeather.create(
   item_id: item_thirteen.id,
-  name: "dry and hot"
+  name: "DRY AND HOT"
 )
 puts "created #{ItemsWeather.count} ItemsWeather"

@@ -1,4 +1,4 @@
 class ItemsWeather < ApplicationRecord
   belongs_to :item
-  NAMES = ["dry and hot", "dry and medium warm", "dry and cold", "rainy and hot", "rainy and medium warm", "rainy and cold"]
+  NAMES = ["DRY AND HOT", "DRY AND MEDIUM WARM", "DRY AND COLD", "RAINY AND HOT", "RAINY AND MEDIUM WARM", "RAINY AND COLD"]
 end
