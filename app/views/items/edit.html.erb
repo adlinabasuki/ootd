@@ -20,6 +20,8 @@
 
           <%= f.input :items_occasions, collection: @occasions, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Occasion", multiple: true, data: {controller: "tom-select", tom_select_options_value: {items: @item.occasions.pluck(:id)}}} %>
 
+          <%= f.input :items_weathers, collection: ItemsWeather::NAMES, autofocus: true, label: false, input_html: {class: "text-center input-background", placeholder: "Weather Occasion", multiple: true, data: {controller: "tom-select", tom_select_options_value: {items: @item.items_weathers.pluck(:name)}}} %>
+
           <%= f.input :photo, input_html: {class: 'd-none', id: 'photo-input'}, label_html: {class: 'upload-photo'}, label: '📷 Upload a photo' %>
         </div>
       <div class="form-actions" style="text-align: center;">
