@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="loading-page"
 export default class extends Controller {
   connect() {
-    // console.log(hehe);
+    console.log(this.element);
   }
 
   load(e) {
