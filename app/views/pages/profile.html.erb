@@ -7,12 +7,16 @@
     <h6><%= @user.email %></h6>
     <div id="item-count-div">
       <div class="count-div">
-        <h6><strong><%= @items_number %></strong></h6>
-        <h6>items</h6>
+        <%= link_to items_path do %>
+          <h6><strong><%= @items_number %></strong></h6>
+          <h6>items</h6>
+        <% end %>
       </div>
       <div class="count-div">
-        <h6><strong><%= @outfits_number %></strong></h6>
-        <h6>outfits</h6>
+        <%= link_to outfits_path do %>
+          <h6><strong><%= @outfits_number %></strong></h6>
+          <h6>outfits</h6>
+        <% end %>
       </div>
     </div>
     <div style="text-align: center;">
