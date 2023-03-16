@@ -26,7 +26,7 @@
 
 
   <div class="occasion-selector mt-5">
-    <%= form_with url: "/outfits/new", method: :get do |form| %>
+    <%= form_with url: "/outfits/new", data: { controller: "loading-page", action:"submit->loading-page#load"}, method: :get do |form| %>
       <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
       <%= form.submit "LET'S GO!", class: "btn btn-primary" %>
       <%= form.hidden_field :temperature,
