@@ -26,7 +26,7 @@
       <h6><%= @shoe.name %></h6>
     </div>
     <div class="button-container-div" style="margin-top: 0.5em;">
-      <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary" %>
+      <%= link_to "DRESS ME", affirmations_display_outfit_path(@outfit), class:"btn btn-primary",data: { controller: "loading-page", action:"submit->loading-page#load"} %>
       <%= button_to "REDO", new_outfit_path, method: :post , class:"btn btn-secondary", params: { occasion: @occasion_name} %>
     </div>
   <% end %>
