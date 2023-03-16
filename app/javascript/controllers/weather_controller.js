@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="weather"
 export default class extends Controller {
-  static targets = ["temp", "city", "icon", "desc"]
+  static targets = ["temp", "city", "icon", "desc", "weatherField", "descriptionField"]
 
   static values = {
     apiKey: String
@@ -31,6 +31,8 @@ export default class extends Controller {
     this.tempTarget.innerText = `${Math.round(data.main.temp)}°`;
     this.descTarget.innerText = desc;
     this.cityTarget.innerText = data.name;
+    this.descriptionFieldTarget.value = data.weather[0].main;
+    this.weatherFieldTarget.value = data.main.temp;
     if(desc === 'Clouds') {
       this.iconTarget.classList.add('wi-cloudy');
     }
