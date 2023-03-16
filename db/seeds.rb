@@ -460,11 +460,6 @@ ItemsWeather.create(
 )
 
 ItemsWeather.create(
-  item_id: item_ten.id,
-  name: "dry and hot"
-)
-
-ItemsWeather.create(
   item_id: item_eleven.id,
   name: "dry and hot"
 )
@@ -492,11 +487,6 @@ ItemsWeather.create(
 ItemsWeather.create(
   item_id: item_eleven.id,
   name: "rainy and cold"
-)
-
-ItemsWeather.create(
-  item_id: item_eleven.id,
-  name: "dry and hot"
 )
 
 ItemsWeather.create(
