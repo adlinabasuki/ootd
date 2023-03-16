@@ -1,12 +1,12 @@
 // @import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://fonts.googleapis.com/css?family=Inter);
+// @import url(https://fonts.googleapis.com/css?family=Inter);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
 
 $border-radius: 20px;
 
 .widget {
   position: absolute;
-  top: 18vh;
+  top: 16.5vh;
   left: 50%;
   display: flex;
   // height: 300px;
@@ -15,7 +15,7 @@ $border-radius: 20px;
   flex-wrap: wrap;
   cursor: pointer;
   border-radius: $border-radius;
-  box-shadow: 0 10px 15px 0 #00000033, 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px 0 #00000033, 0 3px 10px 0 rgba(0, 0, 0, 0.2);
   
   .weatherIcon{
     flex: 1 100%;
@@ -27,7 +27,7 @@ $border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 80px;
+    font-size: 70px;
     
     i{
       padding-top: 17px;
@@ -42,12 +42,14 @@ $border-radius: 20px;
     align-items: center;
     color: white;
     width: 17em;
+    height: 4em;
     padding: 12px;
     
     .temperature{
       flex: 0 0 40%;
       width: 100%;
-      font-size: 40px;
+      font-size: 30px;
+      font-weight: 400;
       display: flex;
       justify-content: space-around;
     }
@@ -62,12 +64,12 @@ $border-radius: 20px;
       
       .weatherCondition{
         text-transform: uppercase;
-        font-size: 25px;
-        font-weight: 100;
+        font-size: 20px;
+        font-weight: 400;
       }
       
       .place{
-        font-size: 13px;
+        font-size: 12px;
       }
     }
   }
@@ -105,7 +107,7 @@ p{
 }
 
 #dress-me-space-between {
-  height: 33vh;
+  height: 30vh;
 }
 
 #dress-me-small-space {
