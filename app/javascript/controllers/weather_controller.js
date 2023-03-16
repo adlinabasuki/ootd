@@ -9,6 +9,7 @@ export default class extends Controller {
   }
 
   connect() {
+    
     navigator.geolocation.getCurrentPosition((position) => {
       const { latitude, longitude } = position.coords;
       const weatherField = document.querySelector(".weather-temp")
