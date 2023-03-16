@@ -10,7 +10,36 @@
   height: 200px;
 }
 
+.outfit2 {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .stacking {
   position: absolute;
   top: 0;
+}
+
+.show {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .image-card-new-outfit {
+    height: 200px;
+    width: 190px;
+
+    img {
+      height: 155px;
+      width: 155px;
+    }
+  }
+
+}
+
+.modal-height {
+  height: 80vh;
 }

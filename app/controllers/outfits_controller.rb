@@ -102,7 +102,9 @@ class OutfitsController < ApplicationController
   end
 
   def outfits_meet_condition(occasion, weather_name)
-    @outfits_occasions = Outfit.all.select { |outfit| outfit.occasions.include?(occasion) }
+    user_outfits = Outfit.where(user: current_user)
+    @outfits_occasions = user_outfits.select { |outfit| outfit.occasions.include?(occasion) }
+    # @outfits_occasions = Outfit.all.select { |outfit| outfit.occasions.include?(occasion) }
     @outfits = @outfits_occasions.select { |outfit| outfit.items_weathers.include?(weather_name) }
   end
 
@@ -126,7 +128,7 @@ class OutfitsController < ApplicationController
   end
 
   def check_if_outfit_exist(outfit_hash)
-    all_outfits = Outfit.all
+    all_outfits = Outfit.where(user: current_user)
     all_outfits.each do |outfit|
       top = outfit.items.where(type: "TOP")
       bottom = outfit.items.where(type: "BOTTOM")
