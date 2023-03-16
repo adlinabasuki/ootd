@@ -16,12 +16,12 @@ export default class extends Controller {
       // const weatherField = document.querySelector(".weather-temp")
       // const iconField = document.getElementById("weather-icon")
       // const descriptionField = document.querySelector(".weather-descr")
-      // const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=3383dc5d38c97be1b56c31e88567f2e7`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=3383dc5d38c97be1b56c31e88567f2e7`;
 
-      const weatherField = document.querySelector(".weather-temp")
-      const iconField = document.getElementById("weather-icon")
-      const descriptionField = document.querySelector(".weather-descr")
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${this.apiKeyValue}`;
+      // const weatherField = document.querySelector(".weather-temp")
+      // const iconField = document.getElementById("weather-icon")
+      // const descriptionField = document.querySelector(".weather-descr")
+      // const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${this.apiKeyValue}`;
 
       fetch(url)
         .then(response => response.json())
