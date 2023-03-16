@@ -102,7 +102,31 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item.update(item_params)
+    # Updaing and destroying items_occasion
+    items_occasions_old = ItemsOccasion.where(item: @item)
+    items_occasions_old.destroy_all
+    items_occasions_new = item_params[:items_occasions]
+    items_occasions_new.delete_at(0)
+    items_occasions_new.each do |occasion|
+      ItemsOccasion.create(
+        item_id: @item.id,
+        occasion_id: occasion.to_i
+      )
+    end
+     # Updaing and destroying items_weathers
+    items_weathers_old = ItemsWeather.where(item: @item)
+    items_weathers_old.destroy_all
+    items_weathers_new = item_params[:items_weathers]
+    items_weathers_new.delete_at(0)
+    items_weathers_new.each do |weather|
+      ItemsWeather.create(
+        item_id: @item.id,
+        name: weather.to_s
+      )
+    end
+    @item.update(name: item_params[:name])
+    @item.update(type: item_params[:type])
+    @item.update(photo: item_params[:photo])
 
     redirect_to item_path(@item)
   end
@@ -121,7 +145,7 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :type, :photo)
+    params.require(:item).permit(:name, :type, :photo, items_occasions: [], items_weathers: [])
   end
 
   def occasion_name_array

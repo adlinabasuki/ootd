@@ -36,6 +36,7 @@ export default class extends Controller {
           this.descTarget.innerText = desc;
           this.cityTarget.innerText = data.name;
           console.log(desc);
+
           if(desc === 'Clouds') {
             this.iconTarget.classList.add('wi-cloudy');
           }
