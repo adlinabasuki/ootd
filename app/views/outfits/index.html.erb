@@ -4,6 +4,15 @@
 <div class="container mt-2" style="text-align: center;">
   <h1>Here are all your outfits</h1>
 </div>
+<% if @outfits == [] %>
+      <div class="d-flex", style="justify-content:center;">
+        <div class= "no-items-message">
+          <h2>You don't have any outfits yet</h2>
+          <br>
+          <i class="fa-solid fa-heart-crack"></i>
+        </div>
+      </div>
+    <% else %>
 <div class="grid">
   <% @outfits.each do |outfit| %>
     <!-- Button trigger modal -->
@@ -37,5 +46,6 @@
         </div>
       </div>
     </div>
+  <% end %>
   <% end %>
 </div>
