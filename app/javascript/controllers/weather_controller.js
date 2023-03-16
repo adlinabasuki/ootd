@@ -25,17 +25,12 @@ export default class extends Controller {
   }
 
   async #fetchWeather(lat, lng) {
-    console.log("banana")
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${this.apiKeyValue}`;
     const data = await (await fetch(url)).json()
-    console.log("fetching", lat, lng);
-    console.log("data", data)
     const desc = data.weather[0].main
-    console.log("weatherData", data)
-    this.tempTarget.innerText = `banana${Math.round(data.main.temp)}°`;
+    this.tempTarget.innerText = `${Math.round(data.main.temp)}°`;
     this.descTarget.innerText = desc;
     this.cityTarget.innerText = data.name;
-    console.log(desc);
     if(desc === 'Clouds') {
       this.iconTarget.classList.add('wi-cloudy');
     }
