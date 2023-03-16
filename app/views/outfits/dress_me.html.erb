@@ -11,8 +11,8 @@
       <div class="weatherIcon"><i class="wi" data-weather-target="icon"></i></div>
       <div class="weatherInfo">
         <div class="temperature"><span data-weather-target="temp"></span></div>
-        <div class="description">    
-          <div class="weatherCondition" data-weather-target="desc"></div>    
+        <div class="description">
+          <div class="weatherCondition" data-weather-target="desc"></div>
           <div class="place" data-weather-target="city"></div>
         </div>
       </div>
@@ -26,9 +26,9 @@
 
 
   <div class="occasion-selector mt-5">
-    <%= form_with url: "/outfits/new", method: :get do |form| %>
+    <%= form_with url: "/outfits/new", data: { controller: "loading-page", action:"submit->loading-page#load"}, method: :get do |form| %>
       <%= form.select :occasion, @occasions_name, {}, { class: "form-dropdown" } %>
-      <%= form.submit "LET'S GO!", class: "btn btn-primary" %>
+      <%= form.submit "LET'S GO!", class: "btn btn-primary"%>
       <%= form.hidden_field :temperature, class: "weather-temp" %>
       <%= form.hidden_field :description, class: "weather-descr" %>
     <% end %>
