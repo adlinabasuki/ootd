@@ -19,7 +19,6 @@ export default class extends Controller {
   async #findLocationByIp() {
     const dataIp = await (await fetch("https://api.ipify.org/?format=json")).json()
     const data = await (await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_VR1Gd5HkPSKiVVq34zXzPPoLjTgg1&ipAddress=${dataIp.ip}`)).json()
-    console.log(data)
     const {lat, lng} = data.location
     return {lat, lng}
   }
@@ -27,6 +26,7 @@ export default class extends Controller {
   async #fetchWeather(lat, lng) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${this.apiKeyValue}`;
     const data = await (await fetch(url)).json()
+    console.log(data)
     const desc = data.weather[0].main
     this.tempTarget.innerText = `${Math.round(data.main.temp)}°`;
     this.descTarget.innerText = desc;
