@@ -10,19 +10,39 @@ class ItemsController < ApplicationController
     @occasions_name = occasion_name_array
     type = params[:type]
     occasion = params[:occasion]
+    weather = params[:weather]
     no_types = type.nil? || type == ""
     no_occasions = occasion.nil? || occasion == ""
+    no_weathers = weather.nil? || weather == ""
 
-    if no_types && no_occasions
+    # All selected on all filters
+    if no_types && no_occasions && no_weathers
       @items = Item.all.where(user: current_user)
-    elsif type != "" && no_occasions
-      @items = Item.where(type: type).where(user: current_user)
-    elsif no_types && occasion != ""
+    # Only type is selected
+    elsif type != "" && no_occasions && no_weathers
+      @items = Item.where(type: type, user: current_user)
+    # Only occasion is selected
+    elsif no_types && occasion != "" && no_weathers
       occasion = Occasion.find_by_name(occasion)
-      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).where(user: current_user)
-    elsif occasion != "" && type != ""
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }, user: current_user)
+    # Only weather is selected
+    elsif no_types && no_occasions && weather != ""
+      @items = Item.joins(:items_weathers).where(items_weathers: { name: weather }, user: current_user)
+    # Occasion and type selected but not weather
+    elsif occasion != "" && type != "" && no_weathers
       occasion = Occasion.find_by_name(occasion)
-      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }).and(Item.where(type: type)).where(user: current_user)
+      @items = Item.joins(:items_occasions).where(items_occasions: { occasion: occasion }, type: type, user: current_user)
+    # Occasion and weather are selected, but not type
+    elsif occasion != "" && no_types && weather != ""
+      occasion = Occasion.find_by_name(occasion)
+      @items = Item.joins(:items_occasions).joins(:items_weathers).where(items_occasions: { occasion: occasion }, items_weathers: { name: weather }, user: current_user)
+    # Weather and type are selected, but not occasion
+    elsif no_occasions && type != "" && weather != ""
+      @items = Item.joins(:items_weathers).where(items_weathers: { name: weather }, type: type, user: current_user)
+    # Occasion, type and weather selected
+    elsif occasion != "" && type != "" && weather != ""
+      occasion = Occasion.find_by_name(occasion)
+      @items = Item.joins(:items_occasions).joins(:items_weathers).where(items_occasions: { occasion: occasion }, items_weathers: { name: weather }, type: type, user: current_user)
     else
       @items = nil
     end
