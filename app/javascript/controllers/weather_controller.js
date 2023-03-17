@@ -57,5 +57,8 @@ export default class extends Controller {
     else if (desc === "Atmosphere") {
       this.iconTarget.classList.add('wi-day-sunny');
     }
+    else {
+      this.iconTarget.classList.add('wi-day-sunny');
+    }
   }
 }
