@@ -36,12 +36,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body outfit2">
-              <% outfit.items.shuffle.each_with_index do |item, index| %>
+            <% outfit.items.shuffle.each_with_index do |item, index| %>
               <div class="image-card-new-outfit <%= index.even? ? "tilted-left" : "tilted-right" %>">
                 <%= cl_image_tag item.photo.key %>
                 <h6><%= item.name %></h6>
               </div>
-              <% end %>
+            <% end %>
           </div>
         </div>
       </div>
