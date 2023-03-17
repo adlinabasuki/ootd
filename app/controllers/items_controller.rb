@@ -61,7 +61,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = Item.new(name: item_params[:name], type: item_params[:type], photo: item_params[:photo] )
     all_occasions = params[:item][:items_occasions].compact_blank
     weather_occasions = params[:item][:items_weathers].compact_blank
     @item.user = current_user
